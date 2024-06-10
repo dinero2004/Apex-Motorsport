@@ -1,0 +1,130 @@
+/* Small Reset */
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(#0F0F0F, #BD1923, #0F0F0F); /* Add black at both ends */
+    background-image: -o-linear-gradient(top, #0F0F0F, #BD1923, #0F0F0F); /* Opera fallback */
+    background-position: center; /* Position the gradient in the center */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-attachment: fixed; /* Keep the background fixed */
+}
+
+
+section {
+    background: #0F0F0F;
+    color: white;
+}
+
+h1 {
+    padding: 40px;
+}
+
+@media (max-width: 767px) {
+    .h1 {
+        text-align: center;
+    }
+
+    .main-section p {
+        text-align: center;
+    }
+
+    .hero-image {
+        padding: 16px;
+    }
+
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.hero-image {
+    width: 100%;
+    padding: 16px 60px 16px 60px;
+}
+
+.main-section p {
+    width: 100%;
+    padding: 0 60px 0 60px;
+    margin: 16px;
+}
+
+/* rimac nevera section */
+
+.rimac-content {
+    margin: 40px 20px 40px 20px;
+}
+
+.rimac-content h2 {
+    margin-bottom: 20px;
+    padding: 0 16px 0 16px;
+}
+
+.rimac-content p {
+    margin-bottom: 20px;
+    padding: 0 16px 0 16px;
+}
+
+@media (max-width: 767px) {
+    .rimac-content {
+        text-align: center;
+    }
+
+    .rimac-content h2 {
+        padding: 0;
+        text-align: center;
+    }
+
+
+    .rimac-content p {
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-image {
+        padding: 16px;
+    }
+
+}
+
+
+/* image gallery rimac nevera */
+
+.rimac-gallery {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    padding: 16px;
+}
+
+@media (min-width: 767px) {
+    .rimac-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
+        gap: 0;
+    }
+    .rimac-gallery > .image-item:nth-child(1) {
+        grid-column: span 2;
+    }
+    .rimac-gallery > .image-item:nth-child(2) {
+        grid-column: span 2;
+    }
+
+}
+
+.image-item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
+

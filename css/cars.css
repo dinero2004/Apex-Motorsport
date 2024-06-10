@@ -1,0 +1,189 @@
+/* Small Reset */
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* heading spacing */
+
+
+h1 {
+    margin: 20px 20px;
+    padding: 10px;
+}
+
+h2 {
+    margin: 20px 20px;
+    padding: 10px;
+}
+
+h3 {
+    padding: 10px;
+}
+
+
+body {
+    background: #d9d9d9;
+    color: black;
+}
+
+/* hero section */
+
+.hero-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));   
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .hero-section img {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  
+  .hero-section p {
+    width: 100%; 
+    padding: 16px;
+    text-align: justify;
+
+  } 
+
+  @media (max-width: 768px) {
+  
+    h1 {
+      text-align: center;
+    }
+
+    .hero-section p {
+      text-align: center;
+      padding: 16px;
+    }
+     
+    .hero-section img  {
+      padding: 16px
+    }
+  }
+  
+    .nissan-rear {
+      width: 100%;
+    }
+  
+    .nissan-racetrack {
+      position: relative;
+      margin-top: 40px;
+      padding: 16px;
+    }  
+  
+  .nissan-racetrack small {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 32px;
+  }  
+
+/* section grid */
+
+.car-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #0f0f0f;
+  color: white;
+  gap: 20px;
+}
+
+.car-section h3 {
+  padding: 10px;
+  margin: 20px;
+}
+
+.car-section ul li {
+  padding: 10px;
+  margin: 0 20px;
+}
+
+
+@media (max-width: 768px) {
+  .car-section {
+      grid-template-columns: 1fr;
+  }}
+
+/* add specs css here */
+
+
+/* image gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  gap: 10px;
+}
+
+.image-item {
+  width: 100%;
+  height: auto;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-item:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+      padding: 16px;
+      grid-template-columns: 1fr;
+  }
+
+  .image-item {
+      width: 100%;
+      height: auto;
+  }
+
+  .image-item:nth-child(2) {
+      grid-column: span 1;
+      grid-row: span 1;
+  }
+}
+
+/* description */
+
+.description {   
+color: black;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.description h3 {
+  padding: 10px;
+}
+
+.description p {
+    padding: 16px;
+    text-align: justify;
+    }
+   
+@media (max-width: 768px) {
+  
+  .description h3 {
+    text-align: center;
+  }
+   
+  .description p {
+    padding: 16;
+    text-align: center;
+  }
+}
+
+
+  
+  

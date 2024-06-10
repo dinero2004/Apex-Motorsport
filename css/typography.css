@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'); 
+}
+
+/* Small Reset */
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 3.2px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2.8px;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+}
+
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.5;
+
+}
+
+nav ul li {
+    font-size: 32px;
+}
+
+nav ul li a {
+    font-size: 25px;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+label.logo {
+    font-size: 30px;
+}
+
+.checkbtn {
+    font-size: 30px;
+}
+
+li {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+small {
+    color: rgb(244, 244, 244);
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 1.8px;
+}
+
+.button a {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    label.logo {
+        font-size: 26px;
+    }
+
+    .checkbtn {
+        font-size: 26px;
+    }
+
+    li {
+        font-size: 18px;
+    }
+
+    small {
+        font-size: 16px;
+    }
+
+
+    .footer-col ul li a {
+        font-size: 20px;
+    }
+}
