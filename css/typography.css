@@ -3,17 +3,6 @@
     src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'); 
 }
 
-/* Small Reset */
-*::before,
-*::after,
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-
 body {
     font-family: 'Montserrat', sans-serif;
     color: white;

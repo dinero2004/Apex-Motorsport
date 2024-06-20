@@ -1,0 +1,28 @@
+body {
+    background: #ece9e4;
+    color: black;
+}
+
+h1 {
+    margin: 20px;
+}
+
+
+.terms {
+    padding: 20px;
+}
+
+section div {
+    margin: 20px;
+    padding: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
