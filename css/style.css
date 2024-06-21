@@ -39,7 +39,7 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background 0.9s ease, color 0.9s ease; /* Added color transition */
+    transition: background 0.9s ease, color 0.9s ease; 
     color: inherit;
 }
 
