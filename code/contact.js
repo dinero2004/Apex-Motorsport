@@ -9,7 +9,7 @@ document.querySelectorAll("input, textarea").forEach((input) => {
 function validateInput(event) {
     const input = event.target;
     const value = input.value;
-    let errorMessage = "";
+    let errorMessage = "please fill the inputs";
 
     switch (input.id) {
         case "first-name":
@@ -52,7 +52,7 @@ function validateForm(event) {
     data.postcode = document.querySelector("#postcode").value;
     data.city = document.querySelector("#city").value;
 
-    // Remove existing error messages
+    // remove existing error messages
     if (document.querySelector("form span")) {
         document.querySelectorAll("form span").forEach((element) => {
             element.remove();
