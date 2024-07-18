@@ -197,13 +197,16 @@ nav ul li a {
     box-sizing: border-box;
 }
 
+.hero-content{
+    padding: 16px;
+}
+
 .hero-content h1 {
     top: 0;
     left: 0;
     margin: 20px;
     padding: 10px;
     box-sizing: border-box;
-    background: rgba(212, 6, 20, 0.5);
 }
 
 .hero-overlay h2 {
@@ -217,6 +220,59 @@ nav ul li a {
 .hero-content img {
     width: 100%;
     padding: 10px;
+}
+
+/* hero-section banner video style */
+
+.banner {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.banner-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.banner-text h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.banner-text p {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 @media(max-width: 768px) {
@@ -336,7 +392,6 @@ nav ul li a {
     width: 100%;
     bottom: 0;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
     margin: 20px;
     padding: 20px;
     max-width: 600px;
@@ -349,7 +404,6 @@ nav ul li a {
     margin: 20px;
     padding: 10px;
     box-sizing: border-box;
-    background: rgba(212, 6, 20, 0.5);
 }
 
 .hero-overlay h2 {
@@ -375,7 +429,6 @@ nav ul li a {
 
     .hero-overlay {
         text-align: center;
-        background: rgba(0, 0, 0);
         margin: 0;
         padding: 10px;
         width: 100%;
@@ -383,11 +436,21 @@ nav ul li a {
 }
 
 /* Explore Section */
+.explore-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
 
 .explore-section {
     background: black;
     height: min-content;
     padding: 16px;
+    transform: translateY(50px);
 }
 
 .explore-section p {

@@ -1,0 +1,33 @@
+{
+    "car_technology_news": [
+      {
+        "title": "Ferrari Unveils Hybrid Supercar SF90 Stradale",
+        "summary": "Ferrari has introduced the SF90 Stradale, a hybrid supercar combining a V8 engine with three electric motors, offering unprecedented performance and efficiency.",
+        "date": "2024-07-15",
+        "source": "Car and Driver",
+        "image": "images/technology/car_news_images/jpg/ferrari-sf90-stradale.jpeg"
+      },
+      {
+        "title": "Lamborghini's Aventador Successor Spotted Testing",
+        "summary": "Spy shots reveal Lamborghini testing the successor to the Aventador, expected to feature a new hybrid powertrain and cutting-edge aerodynamic design.",
+        "date": "2024-07-14",
+        "source": "Motor Trend",
+        "image": "images/technology/car_news_images/jpg/lamborghini-aventador.jpeg"
+      },
+      {
+        "title": "Mercedes-AMG GT Black Series Sets New Nürburgring Record",
+        "summary": "The Mercedes-AMG GT Black Series has set a new lap record at the Nürburgring, showcasing its advanced engineering and high-performance capabilities.",
+        "date": "2024-07-13",
+        "source": "Top Gear",
+        "image": "images/technology/car_news_images/jpg/mercedes-amg-gt-black.jpeg"
+      },
+      {
+        "title": "Porsche 911 GT3 RS: The Ultimate Track Weapon",
+        "summary": "Porsche has released the 911 GT3 RS, featuring a naturally aspirated flat-six engine and a suite of track-focused technologies to dominate the racetrack.",
+        "date": "2024-07-12",
+        "source": "Road & Track",
+        "image": "images/technology/car_news_images/jpg/porsche-911-gt3.jpeg"
+      }
+    ]
+  }
+  
