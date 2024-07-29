@@ -1,6 +1,11 @@
 
 @import url("typography.css");
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 /* Small Reset */
 *::before,
 *::after,
@@ -17,7 +22,7 @@ body {
 
 /* button css */
 
-.button {
+button {
     border: 1px solid black;
     border-radius: 5px;
     height: 50px;
@@ -29,7 +34,7 @@ body {
     position: relative;
 }
 
-.button a {
+button a {
     position: absolute;
     top: 0;
     left: 0;
@@ -43,12 +48,12 @@ body {
     color: inherit;
 }
 
-.button:hover {
+button:hover {
     color: white;
     background: #BD1923;
 }
 
-.button a:hover {
+button a:hover {
     color: white;
 }
 
@@ -209,10 +214,6 @@ nav ul li a {
     box-sizing: border-box;
 }
 
-.hero-overlay h2 {
-    margin-bottom: 10px;
-}
-
 .hero-overlay p {
     font-size: 1.2em;
 }
@@ -222,16 +223,16 @@ nav ul li a {
     padding: 10px;
 }
 
-/* hero-section banner video style */
+/* hero-section hero banner video style */
 
-.banner {
+.hero {
     width: 100%;
     height: 600px;
     position: relative;
     overflow: hidden;
 }
 
-.banner video {
+.hero video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -242,28 +243,29 @@ nav ul li a {
     z-index: 0;
 }
 
-.banner-text {
+.hero-text {
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    text-align: center;
     color: #fff;
     z-index: 1;
 }
 
-.banner-text h1 {
-    margin: 0;
-    font-size: 3rem;
+
+.hero-text h1 {
+    position: relative; /* Ensure it's positioned relative to the normal flow */
+    margin: 20px; 
+    padding: 10px; 
 }
 
-.banner-text p {
-    margin: 10px 0 0;
-    font-size: 1.5rem;
+.hero-text h2 {
+    position: relative; 
+    margin: 100px 20px 0 20px; 
+    padding: 10px; 
 }
+
 
 .overlay {
     position: absolute;
@@ -449,7 +451,6 @@ nav ul li a {
 .explore-section {
     background: black;
     height: min-content;
-    padding: 16px;
     transform: translateY(50px);
 }
 
@@ -458,8 +459,7 @@ nav ul li a {
 }
 
 .explore-section h2 {
-    padding-left: 30px;
-    margin-left: 10px;
+    padding: 30px;
 }
 
 .explore-text p {

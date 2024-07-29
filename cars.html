@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cars.css">
     <script src="code/code.js" defer></script>
-    <link rel="icon" href="assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
+    <script src="code/cars.js" defer></script>
+     <link rel="icon" href="assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
     <title>Cars</title>
 </head>
@@ -46,16 +47,18 @@
         <!-- hero section -->
 
         <main>
-            <h1>The Car Models</h1>
-            <div class="hero-section">
-                <p>
-                    Start your journey with extraordinary automobiles. The careful selection of each vehicle will
-                    elevate your experience by the careful selection of each vehicle. Whether you're into cars or just
-                    curious about top-notch auto craftsmanship, Apex invites you to discover the intricate details,
-                    specifications, and tales behind each vehicle. We're committed to providing a presentation, where
-                    each step opens up a world where performance meets perfection.</p>
-                <img src="images/cars-images/webp/nissan-gtr.webp" alt="Nissan Gtr rushing ont the racetrack"
-                    loading="lazy">
+            <div class="hero-background">
+                <div class="hero-section">
+                    <h1>The Car Models</h1>
+                    <p>
+                        Start your journey with extraordinary automobiles. The careful selection of each vehicle will
+                        elevate your experience by the careful selection of each vehicle. Whether you're into cars or just
+                        curious about top-notch auto craftsmanship, Apex invites you to discover the intricate details,
+                        specifications, and tales behind each vehicle. We're committed to providing a presentation, where
+                        each step opens up a world where performance meets perfection.</p>
+                    <!-- <img src="images/cars-images/webp/nissan-gtr.webp" alt="Nissan Gtr rushing ont the racetrack"
+                        loading="lazy"> -->
+                </div>
             </div>
         </main>
         <div class="nissan-racetrack">
@@ -83,39 +86,28 @@
                     <li>Price: Varies, but starting around $145,000</li>
                 </ul>
             </div>
-            <div class="gallery">
-                <div class="image-item">
-                    <img src="images/cars-images/webp/audiR8-racetrack-frontlight.webp"
-                        alt="Audi R8 GT Plus speeding on racetrack" loading="lazy" srcset="images/cars-images/webp/audiR8-racetrack-frontlight.webp,
-                                 images/cars-images/jpg/audiR8-racetrack-frontlight.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/audiR8-front3.webp" alt="Audi R8 GT Plus front view"
-                        loading="lazy" srcset="images/cars-images/webp/audiR8-front3.webp,
-                                 images/cars-images/jpg/audiR8-front3.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/audiR8gt-trim.webp" alt="Audi R8 GT Plus front view"
-                        loading="lazy" srcset="images/cars-images/webp/audiR8gt-trim.webp,
-                                 images/cars-images/jpg/audiR8gt-trim.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/audiR8-backlight.webp" alt="Audi R8 GT Plus frontlight"
-                        loading="lazy" srcset="images/cars-images/webp/audiR8-backlight.webp,
-                                 images/cars-images/jpg/audiR8-backlight.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/audiR8-racetrack-re.webp" alt="Audi R8 GT Plus backlight"
-                        loading="lazy" srcset="images/cars-images/webp/audiR8-racetrack-re.webp,
-                                 images/cars-images/jpg/audiR8-racetrack-re.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/audiR8-back2.webp" alt="Audi R8 GT Plus inside" loading="lazy"
-                        srcset="images/cars-images/webp/audiR8-back2.webp,
-                                 images/cars-images/jpg/audiR8-back2.jpg">
-                </div>
-            </div>
-            </div>
+           <div class="image-container">
+        <div class="main-img">
+            <img src="images/cars-images/jpg/audiR8-front3.jpg" alt="Audi R8 GT Plus front view" id="active" />
+        </div>
+        <div class="images">
+            <img src="images/cars-images/webp/audiR8-front3.webp" alt="Audi R8 GT Plus front view" loading="lazy"
+                srcset="images/cars-images/webp/audiR8-front3.webp, images/cars-images/jpg/audiR8-front3.jpg">
+
+            <img src="images/cars-images/webp/audiR8-racetrack-frontlight.webp"
+                alt="Audi R8 GT Plus speeding on racetrack" loading="lazy"
+                srcset="images/cars-images/webp/audiR8-racetrack-frontlight.webp, images/cars-images/jpg/audiR8-racetrack-frontlight.jpg">    
+            
+            <img src="images/cars-images/webp/audiR8gt-trim.webp" alt="Audi R8 GT Plus front view" loading="lazy"
+                srcset="images/cars-images/webp/audiR8gt-trim.webp, images/cars-images/jpg/audiR8gt-trim.jpg">
+            <img src="images/cars-images/webp/audiR8-backlight.webp" alt="Audi R8 GT Plus frontlight" loading="lazy"
+                srcset="images/cars-images/webp/audiR8-backlight.webp, images/cars-images/jpg/audiR8-backlight.jpg">
+            <img src="images/cars-images/webp/audiR8-racetrack-re.webp" alt="Audi R8 GT Plus backlight" loading="lazy"
+                srcset="images/cars-images/webp/audiR8-racetrack-re.webp, images/cars-images/jpg/audiR8-racetrack-re.jpg">
+            <img src="images/cars-images/webp/audiR8-back2.webp" alt="Audi R8 GT Plus inside" loading="lazy"
+                srcset="images/cars-images/webp/audiR8-back2.webp, images/cars-images/jpg/audiR8-back2.jpg">
+        </div>
+    </div>
         </section>
 
         <div class="description">
@@ -162,35 +154,20 @@
                 </ul>
             </div>
 
-            <div class="gallery">
-                <div class="image-item">
-                    <img src="images/cars-images/webp/ferrari-frontlight.webp" alt="Ferrari front light" loading="lazy"
-                        srcset="images/cars-images/webp/ferrari-frontlight.webp,
-                                 images/cars-images/jpg/ferrari-frontlight.jpg">
+            <div class="image-container">
+                <div class="main-img">
+                    <img src="images/cars-images/jpg/ferrari-frontlight.jpg" alt="Ferrari front light" id="active" />
                 </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/ferrari-front.webp" alt="Ferrari front view" loading="lazy"
-                        srcset="images/cars-images/webp/ferrari-front.webp,
-                                 images/cars-images/jpg/ferrari-front.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/ferrari-trim.webp" alt="Ferrari trim" loading="lazy" srcset="images/cars-images/webp/ferrari-trim.webp,
-                                 images/cars-images/jpg/ferrari-trim.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/ferrari-backlight.webp" alt="Ferrari backlight" loading="lazy"
-                        srcset="images/cars-images/webp/ferrari-backlight.webp,
-                                 images/cars-images/jpg/ferrari-backlight.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/ferrari-side.webp" alt="Ferrari side view" loading="lazy" srcset="images/cars-images/webp/ferrari-side.webp,
-                                 images/cars-images/jpg/ferrari-side.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/ferrari-rear.webp" alt="Ferrari rear view" loading="lazy" srcset="images/cars-images/webp/ferrari-rear.webp,
-                                 images/cars-images/jpg/ferrari-rear.jpg">
+                <div class="images">
+                    <img src="images/cars-images/webp/ferrari-frontlight.webp" alt="Ferrari front light" loading="lazy" srcset="images/cars-images/webp/ferrari-frontlight.webp, images/cars-images/jpg/ferrari-frontlight.jpg">
+                    <img src="images/cars-images/webp/ferrari-front.webp" alt="Ferrari front view" loading="lazy" srcset="images/cars-images/webp/ferrari-front.webp, images/cars-images/jpg/ferrari-front.jpg">
+                    <img src="images/cars-images/webp/ferrari-trim.webp" alt="Ferrari trim" loading="lazy" srcset="images/cars-images/webp/ferrari-trim.webp, images/cars-images/jpg/ferrari-trim.jpg">
+                    <img src="images/cars-images/webp/ferrari-backlight.webp" alt="Ferrari backlight" loading="lazy" srcset="images/cars-images/webp/ferrari-backlight.webp, images/cars-images/jpg/ferrari-backlight.jpg">
+                    <img src="images/cars-images/webp/ferrari-side.webp" alt="Ferrari side view" loading="lazy" srcset="images/cars-images/webp/ferrari-side.webp, images/cars-images/jpg/ferrari-side.jpg">
+                    <img src="images/cars-images/webp/ferrari-rear.webp" alt="Ferrari rear view" loading="lazy" srcset="images/cars-images/webp/ferrari-rear.webp, images/cars-images/jpg/ferrari-rear.jpg">
                 </div>
             </div>
+            
         </section>
 
         <div class="description">
@@ -239,43 +216,20 @@
                 </ul>
             </div>
 
-            <div class="gallery">
-                <div class="image-item">
-                    <img src="images/cars-images/webp/porsche-fr-light.webp" alt="Yellow Porsche GT3 Rs frontlight"
-                        loading="lazy" srcset="images/cars-images/webp/porsche-fr-light.webp,
-                                 images/cars-images/jpg/porsche-fr-light.jpg">
+            <div class="image-container">
+                <div class="main-img">
+                    <img src="images/cars-images/jpg/porsche-gt3-front.jpg" alt="Yellow Porsche GT3 Rs front view" id="active"/>
                 </div>
-
-                <div class="image-item">
-                    <img src="images/cars-images/webp/porsche-gt3-front.webp" alt="Yellow Porsche GT3 backlight"
-                        loading="lazy" srcset="images/cars-images/webp/porsche-gt3-front.webp,
-                                 images/cars-images/jpg/porsche-gt3-front.jpg">
+                <div class="images">
+                    <img src="images/cars-images/webp/porsche-fr-light.webp" alt="Yellow Porsche GT3 Rs frontlight" loading="lazy" srcset="images/cars-images/webp/porsche-fr-light.webp, images/cars-images/jpg/porsche-fr-light.jpg">
+                    <img src="images/cars-images/webp/porsche-gt3-front.webp" alt="Yellow Porsche GT3 Rs front view" loading="lazy" srcset="images/cars-images/webp/porsche-gt3-front.webp, images/cars-images/jpg/porsche-gt3-front.jpg">
+                    <img src="images/cars-images/webp/porsche-trim.webp" alt="Yellow Porsche GT3 Rs inside view" loading="lazy" srcset="images/cars-images/webp/porsche-trim.webp, images/cars-images/jpg/porsche-trim.jpg">
+                    <img src="images/cars-images/webp/porsche-backlight.webp" alt="Yellow Porsche GT3 Rs backlight" loading="lazy" srcset="images/cars-images/webp/porsche-backlight.webp, images/cars-images/jpg/porsche-backlight.jpg">
+                    <img src="images/cars-images/webp/porsche-back.webp" alt="Yellow Porsche GT3 Rs rear bumper" loading="lazy" srcset="images/cars-images/webp/porsche-back.webp, images/cars-images/jpg/porsche-back.jpg">
+                    <img src="images/cars-images/webp/porsche-rear.webp" alt="Yellow Porsche GT3 Rs rear view" loading="lazy" srcset="images/cars-images/webp/porsche-rear.webp, images/cars-images/jpg/porsche-rear.jpg">
                 </div>
-
-                <div class="image-item">
-                    <img src="images/cars-images/webp/porsche-trim.webp" alt="Yellow Porsche GT3 Rs inside view"
-                        loading="lazy" srcset="images/cars-images/webp/porsche-trim.webp,
-                                 images/cars-images/jpg/porsche-trim.jpg">
-                </div>
-
-                <div class="image-item">
-                    <img src="images/cars-images/webp/porsche-backlight.webp" alt="Yellow Porsche GT3 Rs front view"
-                        loading="lazy" srcset="images/cars-images/webp/porsche-backlight.webp,
-                        images/cars-images/jpg/porsche-backlight.jpg">
-                </div>
-        
-                <div class="image-item">
-                    <img src="images/cars-images/webp/porsche-back.webp" alt="Yellow Porsche GT3 Rs rear bumper"
-                        loading="lazy" srcset="images/cars-images/webp/porsche-back.webp,
-                        images/cars-images/jpg/porsche-back.jpg">
-                </div>
-                <div class="image-item">
-                    <img src="images/cars-images/webp/porsche-rear.webp" alt="Yellow Porsche GT3 Rs rear view"
-                        loading="lazy" srcset="images/cars-images/webp/porsche-rear.webp,
-                                 images/cars-images/jpg/porsche-rear.jpg">
-                </div>
-              
             </div>
+            
         </section>
 
         <div class="description">

@@ -1,15 +1,19 @@
-// Add event listener to the Submit button to validate the form on submission
 document.querySelector("button").addEventListener("click", validateForm);
 
-// Add event listeners to validate inputs as the user fills them out
 document.querySelectorAll("input, textarea").forEach((input) => {
     input.addEventListener("blur", validateInput);
+});
+
+document.querySelectorAll("input[type='radio']").forEach((radio) => {
+    radio.addEventListener("change", () => {
+        displayError(radio.closest(".radio-group").querySelector(".error"), "");
+    });
 });
 
 function validateInput(event) {
     const input = event.target;
     const value = input.value;
-    let errorMessage = "please fill the inputs";
+    let errorMessage = "";
 
     switch (input.id) {
         case "first-name":
@@ -35,120 +39,106 @@ function validateInput(event) {
             break;
     }
 
-    displayError(input, errorMessage);
+    displayError(input.nextElementSibling, errorMessage);
 }
 
 function validateForm(event) {
     event.preventDefault();
 
-    let data = {};
-    let validationErrors = {};
+    let data = {
+        title: document.querySelector("input[name='title']:checked"),
+        firstName: document.querySelector("#first-name"),
+        lastName: document.querySelector("#last-name"),
+        email: document.querySelector("#email"),
+        address: document.querySelector("#address"),
+        postcode: document.querySelector("#postcode"),
+        city: document.querySelector("#city"),
+        message: document.querySelector("#message")
+    };
 
-    data.firstName = document.querySelector("#first-name").value;
-    data.lastName = document.querySelector("#last-name").value;
-    data.email = document.querySelector("#email").value;
-    data.message = document.querySelector("#message").value;
-    data.address = document.querySelector("#address").value;
-    data.postcode = document.querySelector("#postcode").value;
-    data.city = document.querySelector("#city").value;
+    let isValid = true;
 
-    // remove existing error messages
-    if (document.querySelector("form span")) {
-        document.querySelectorAll("form span").forEach((element) => {
-            element.remove();
-        });
-    }
-
-    validationErrors.firstName = validateName(data.firstName, "First name");
-    validationErrors.lastName = validateName(data.lastName, "Last name");
-    validationErrors.email = validateEmail(data.email);
-    validationErrors.message = validateMessage(data.message);
-    validationErrors.address = validateAddress(data.address);
-    validationErrors.postcode = validatePostcode(data.postcode);
-    validationErrors.city = validateCity(data.city);
-
-    if (Object.keys(validationErrors).every(key => !validationErrors[key])) {
-        console.log(data);
+    if (!data.title) {
+        isValid = false;
+        displayError(document.querySelector(".radio-group .error"), "Please select a title.");
     } else {
-        displayErrors(validationErrors);
+        displayError(document.querySelector(".radio-group .error"), "");
     }
-}
 
-function validateName(name, fieldName) {
-    if (!name) {
-        return `No ${fieldName.toLowerCase()} provided`;
-    } else if (name.length <= 3) {
-        return `${fieldName} must be at least 3 characters long`;
-    }
-    return "";
-}
+    Object.values(data).forEach((input) => {
+        if (input && input.id) {
+            const event = new Event("blur");
+            input.dispatchEvent(event);
+            if (input.nextElementSibling.textContent !== "") {
+                isValid = false;
+            }
+        }
+    });
 
-function validateEmail(email) {
-    if (!email) {
-        return "No email provided";
+    if (isValid) {
+        const formData = {
+            title: data.title.value,
+            firstName: data.firstName.value,
+            lastName: data.lastName.value,
+            email: data.email.value,
+            address: data.address.value,
+            postcode: data.postcode.value,
+            city: data.city.value,
+            message: data.message.value
+        };
+        console.log("Form is valid", formData);
+        // Handle form submission with formData
     } else {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return "Email is invalid, please check again";
-        }
+        console.log("Form has errors");
+    }
+}
+
+function validateName(value, fieldName) {
+    if (value.trim() === "") {
+        return `${fieldName} is required.`;
     }
     return "";
 }
 
-function validateMessage(message) {
-    if (message !== "" && message.length < 31) {
-        return "The message must be at least 30 characters long";
+function validateEmail(value) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (value.trim() === "") {
+        return "Email is required.";
+    }
+    if (!emailRegex.test(value)) {
+        return "Please enter a valid email address.";
     }
     return "";
 }
 
-function validateAddress(address) {
-    if (!address) {
-        return "No address provided";
+function validateMessage(value) {
+    if (value.trim() === "") {
+        return "Message is required.";
     }
     return "";
 }
 
-function validatePostcode(postcode) {
-    if (!postcode) {
-        return "No postcode provided";
-    } else {
-        const swissPostcodeRegex = /^[1-9]\d{3}$/;
-        if (!swissPostcodeRegex.test(postcode)) {
-            return "Postcode is invalid";
-        }
+function validateAddress(value) {
+    if (value.trim() === "") {
+        return "Address is required.";
     }
     return "";
 }
 
-function validateCity(city) {
-    if (!city) {
-        return "No city provided";
+function validatePostcode(value) {
+    if (value.trim() === "") {
+        return "Postcode is required.";
     }
     return "";
 }
 
-function displayError(input, errorMessage) {
-    if (errorMessage) {
-        let errContainer = input.nextElementSibling;
-        if (!errContainer || errContainer.tagName !== "SPAN") {
-            errContainer = document.createElement("span");
-            input.after(errContainer);
-        }
-        errContainer.innerHTML = errorMessage;
-    } else {
-        const errContainer = input.nextElementSibling;
-        if (errContainer && errContainer.tagName === "SPAN") {
-            errContainer.remove();
-        }
+function validateCity(value) {
+    if (value.trim() === "") {
+        return "City is required.";
     }
+    return "";
 }
 
-function displayErrors(errors) {
-    for (const key in errors) {
-        if (errors[key]) {
-            const input = document.querySelector(`#${key}`);
-            displayError(input, errors[key]);
-        }
-    }
+function displayError(spanElement, message) {
+    spanElement.textContent = message;
 }
