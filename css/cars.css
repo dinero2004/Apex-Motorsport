@@ -42,14 +42,6 @@ body {
     display: grid;  
     flex-direction: column;
     color: white;
-
-    /* glas effect */
-
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, ));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px  rgba(0, 0, 0, 0.37);
   }
   
   
@@ -100,7 +92,8 @@ body {
   grid-template-columns: repeat(2, 1fr);
   background: #0f0f0f;
   color: white;
-  gap: 20px;
+  gap: 10px;
+  padding:24px;
 }
 
 .car-section h3 {
@@ -121,7 +114,6 @@ body {
 
 /* add specs css here */
 
-
 /* new image gallery */
 
 .main-img {
@@ -139,7 +131,7 @@ body {
 
 .image-container {
   max-width: 800px;
-  margin: auto;
+  margin-top: auto;
   background: #0f0f0f;
   padding: 16px;
 }
@@ -177,7 +169,7 @@ body {
 
 /* description */
 
-.description {   
+/* .description {   
 color: black;
 margin-top: 20px;
 margin-bottom: 20px;
@@ -202,7 +194,7 @@ margin-bottom: 20px;
     padding: 16;
     text-align: center;
   }
-}
+} */
 
 
   

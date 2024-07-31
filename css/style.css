@@ -1,10 +1,9 @@
-
 @import url("typography.css");
 
 html {
     scroll-behavior: smooth;
-  }
-  
+}
+
 
 /* Small Reset */
 *::before,
@@ -15,6 +14,93 @@ html {
     padding: 0;
 }
 
+.glass {
+    /* glass effect */
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, ));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+/* accordion styles */
+
+.accordion {
+    max-width: max-content;
+    margin: 20px auto;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+  }
+
+  .acordion-content-dark .accordion-header-dark {
+    background: black;
+    color: white;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .accordion-item:last-child {
+    border-bottom: none;
+  }
+  
+  .accordion-header {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    color: black;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .accordion-content p {
+    margin: 0;
+    padding: 10px;
+    color: black;
+  }
+  
+
+
+ /* Common styles for view-more buttons */
+.view-more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 18px;
+    font-size: 16px;
+  }
+  
+  .view-more:focus {
+    outline: none;
+  }
+  
+  /* Dark button styles */
+  .view-more-dark {
+    color: black;
+  }
+  
+  .view-more-dark:hover {
+    color: #6d6d6d; /* Brighter gray */
+  }
+  
+  /* Light button styles */
+  .view-more-light {
+    color: white;
+  }
+  
+  .view-more-light:hover {
+    color: #d3d3d3; /* Darker gray */
+  }
+  
 
 body {
     background: #0F0F0F;
@@ -23,14 +109,14 @@ body {
 /* button css */
 
 button {
+    color: #ffffff;
+    background-color: #202020;
     border: 1px solid black;
     border-radius: 5px;
     height: 50px;
-    width: 164px;
+    width: 160px;
     box-shadow: none;
-    background: white;
-    transition: background 0.9s ease;
-    color: black;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     position: relative;
 }
 
@@ -44,18 +130,10 @@ button a {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background 0.9s ease, color 0.9s ease; 
+    transition: background 0.9s ease, color 0.9s ease;
     color: inherit;
 }
 
-button:hover {
-    color: white;
-    background: #BD1923;
-}
-
-button a:hover {
-    color: white;
-}
 
 
 /* Navigation */
@@ -182,13 +260,14 @@ nav ul li a {
     .hero-content {
         position: relative;
     }
-    
+
     .hero-overlay {
         position: absolute;
     }
 
     .hero-content h1 {
-        position: absolute;}
+        position: absolute;
+    }
 }
 
 .hero-overlay {
@@ -202,7 +281,7 @@ nav ul li a {
     box-sizing: border-box;
 }
 
-.hero-content{
+.hero-content {
     padding: 16px;
 }
 
@@ -255,15 +334,16 @@ nav ul li a {
 
 
 .hero-text h1 {
-    position: relative; /* Ensure it's positioned relative to the normal flow */
-    margin: 20px; 
-    padding: 10px; 
+    position: relative;
+    /* Ensure it's positioned relative to the normal flow */
+    margin: 20px;
+    padding: 10px;
 }
 
 .hero-text h2 {
-    position: relative; 
-    margin: 100px 20px 0 20px; 
-    padding: 10px; 
+    position: relative;
+    margin: 100px 20px 0 20px;
+    padding: 10px;
 }
 
 
@@ -302,17 +382,17 @@ nav ul li a {
     max-width: 1000px;
     position: relative;
     margin: auto;
-  }
-  
-  .slides {
+}
+
+.slides {
     display: none;
-  }
-  
-  img {
+}
+
+img {
     vertical-align: middle;
-  }
-  
-  .text {
+}
+
+.text {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -320,9 +400,10 @@ nav ul li a {
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  .prev, .next {
+}
+
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -334,23 +415,24 @@ nav ul li a {
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none;
-  }
-  
-  .next {
+}
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  .prev {
+}
+
+.prev {
     left: 0;
     border-radius: 0 3px 3px 0;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  .pausePlay {
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pausePlay {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -360,18 +442,23 @@ nav ul li a {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-  }
-  
-  .fade {
+}
+
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 
 /* image slider */
 
@@ -381,13 +468,14 @@ nav ul li a {
     .hero-content {
         position: relative;
     }
-    
+
     .hero-overlay {
         position: absolute;
     }
 
     .hero-content h1 {
-        position: absolute;}
+        position: absolute;
+    }
 }
 
 .hero-overlay {
@@ -445,7 +533,7 @@ nav ul li a {
     width: 100%;
     height: 100%;
     pointer-events: none;
-  }
+}
 
 
 .explore-section {
@@ -456,10 +544,16 @@ nav ul li a {
 
 .explore-section p {
     display: flex;
+    color: white;
 }
 
 .explore-section h2 {
     padding: 30px;
+    color: white;
+}
+
+.explore-section button {
+    margin: 0 30px;
 }
 
 .explore-text p {
@@ -635,26 +729,30 @@ nav ul li a {
 
 .model-section,
 .technology-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    
     padding: 20px;
+   
 }
 
-.discover-content {
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
+.discover-section{
+    background: white;
+    color:black;
+    margin: 16px;
 }
 
-.discover-content h2 {
-    margin: 20px;
-    padding: 10px;
+.accordion-content > .explore-button {
+    margin-top: 20px;
+    background: white;
+    color:black;
+    box-shadow: inset;
 }
 
-.button {
-    margin: 40px;
+.explore-button:hover {
+    background: rgb(0, 0, 0);
+     color:white;
 }
+
+
 
 @media (max-width: 768px) {
     .discover-text {
