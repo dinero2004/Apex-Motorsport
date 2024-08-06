@@ -1,8 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('json/data.json')
-        .then(response => response.json())
-        .then(data => displayBlogPosts(data.car_technology_news))
-        .catch(error => console.error('Error fetching data:', error));
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        const response = await fetch('json/data.json');
+        const data = await response.json();
+        displayBlogPosts(data.car_technology_news);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
 });
 
 function displayBlogPosts(posts) {

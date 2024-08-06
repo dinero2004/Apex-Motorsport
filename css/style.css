@@ -247,7 +247,7 @@ nav ul li a {
     }
 
     .nav-menu.active {
-        z-index: 2;
+        z-index: 3;
         right: 0;
     }
 }
@@ -364,6 +364,13 @@ nav ul li a {
         margin: 0;
         padding: 10px;
     }
+    
+    .hero-text h2 {
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+    }
+
 
     .hero-overlay {
         text-align: center;
@@ -566,13 +573,11 @@ img {
     }
 
     .explore-section h2 {
-        padding: 0;
-        text-align: center;
+        padding: 16px;
     }
 
     .explore-text {
-        padding: 0;
-        text-align: center;
+        padding: 10px;
     }
 
     .explore-text p {

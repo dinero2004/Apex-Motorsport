@@ -53,19 +53,30 @@ body {
   } 
 
   @media (max-width: 768px) {
-  
-    h1 {
-      text-align: center;
-    }
 
-    .hero-section p {
-      text-align: center;
-      padding: 16px;
-    }
+      h1 {
+          text-align: center;
+      }
+  
+      .hero-background {
+        align-items: center;
+        padding: 0;
+      }
+
+      .hero-section {
+        position: relative;
+        top: 50px;
+          width: 100%; 
+          z-index: 2;
+          
+      }
+  
+      .hero-section p {
+          text-align: center;
+      }
+
+  
      
-    .hero-section img  {
-      padding: 16px
-    }
   }
   
     .nissan-rear {
@@ -166,35 +177,6 @@ body {
   animation: fadeIn 0.5s ease-in 1 forwards;
 }
 
-
-/* description */
-
-/* .description {   
-color: black;
-margin-top: 20px;
-margin-bottom: 20px;
-}
-
-.description h3 {
-  padding: 10px;
-}
-
-.description p {
-    padding: 16px;
-    text-align: justify;
-    }
-   
-@media (max-width: 768px) {
-  
-  .description h3 {
-    text-align: center;
-  }
-   
-  .description p {
-    padding: 16;
-    text-align: center;
-  }
-} */
 
 
   
