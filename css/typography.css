@@ -3,6 +3,10 @@
     src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'); 
 }
 
+html {
+    font-size: 16px; /* 1rem = 16px */
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -11,137 +15,164 @@ body {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 2.5rem; /* 40px */
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem; /* 4px */
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 2rem; /* 32px */
     font-weight: 600;
-    letter-spacing: 3.2px;
+    letter-spacing: 0.2rem; /* 3.2px */
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 1.75rem; /* 28px */
     font-weight: 600;
-    letter-spacing: 2.8px;
+    letter-spacing: 0.175rem; /* 2.8px */
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     font-weight: 500;
-    letter-spacing: 2.4px;
+    letter-spacing: 0.15rem; /* 2.4px */
 }
 
-
 p {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; /* 2px */
     line-height: 1.5;
-
 }
 
 nav ul li {
-    font-size: 32px;
+    font-size: 2rem; /* 32px */
 }
 
 nav ul li a {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 2rem; /* 32px */
 }
 
 label.logo {
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px */
 }
 
 .checkbtn {
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px */
 }
 
 li {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; /* 2px */
 }
 
 small {
     color: rgb(244, 244, 244);
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     font-weight: 100;
-    letter-spacing: 1.8px;
+    letter-spacing: 0.1125rem; /* 1.8px */
 }
 
-button  {
-    font-size: 20px;
+button {
+    font-size: 1.25rem; /* 20px */
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; /* 2px */
     text-transform: capitalize;
 }
 
 .footer-col ul li a {
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.5625rem; /* 25px */
     color: white;
     transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 30px;
+        font-size: 1.875rem; /* 30px */
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 1.625rem; /* 26px */
     }
 
     h3 {
-        font-size: 22px;
+        font-size: 1.375rem; /* 22px */
     }
 
     h4 {
-        font-size: 20px;
+        font-size: 1.25rem; /* 20px */
     }
 
     p {
-        font-size: 18px;
+        font-size: 1.125rem; /* 18px */
     }
 
     nav ul li a {
-        font-size: 20px;
+        font-size: 1.25rem; /* 20px */
     }
 
     .logo {
-        font-size: 28px;
+        font-size: 1.75rem; /* 28px */
     }
 
     label.logo {
-        font-size: 26px;
+        font-size: 1.625rem; /* 26px */
     }
 
     .checkbtn {
-        font-size: 26px;
+        font-size: 1.625rem; /* 26px */
     }
 
     li {
-        font-size: 18px;
+        font-size: 1.125rem; /* 18px */
     }
 
     small {
-        font-size: 16px;
+        font-size: 1rem; /* 16px */
     }
 
-
     .footer-col ul li a {
-        font-size: 20px;
+        font-size: 1.25rem; /* 20px */
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3.3rem; /* 52.8px */
+    }
+
+    h2 {
+        font-size: 2.64rem; /* 42.24px */
+    }
+
+    h3 {
+        font-size: 2.31rem; /* 36.96px */
+    }
+
+    h4 {
+        font-size: 1.98rem; /* 31.68px */
+    }
+
+    p {
+        font-size: 1.65rem; /* 26.4px */
+    }
+
+    span {
+        font-size: 1.65rem; /* 26.4px */
+    }
+
+    button {
+        font-size: 1.65rem; /* 26.4px */
     }
 }
