@@ -11,6 +11,11 @@ section {
     color: white;
 }
 
+section > .acordion-content .accordion-header {
+    background: black;
+    color: white;
+  }
+
 h1 {
     padding: 40px;
 }

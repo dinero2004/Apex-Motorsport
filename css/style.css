@@ -34,11 +34,6 @@ html {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     
   }
-
-  .acordion-content-dark .accordion-header-dark {
-    background: black;
-    color: white;
-  }
   
   .accordion-item {
     border-bottom: 1px solid #ddd;
