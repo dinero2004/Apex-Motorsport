@@ -49,3 +49,29 @@ body {
     flex-direction: column;
 }
 }
+
+/* Styles for larger screens (1200px and above) */
+@media screen and (min-width: 1020px) {
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto;
+        gap: 60px; /* Increase the gap between items */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .creator-text {
+        margin: 60px 20px; /* Increase the margin for text section */
+    }
+
+    .creator-text p {
+        margin-bottom: 100px; 
+    }
+
+    .img-section img {
+        margin: 60px 20px;
+        height: 800px; /* Make images larger on bigger screens */
+    }
+}

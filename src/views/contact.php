@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+include("../templates/header.php");
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
     <script src="code/code.js" defer></script>
     <script src="code/contact.js" defer></script>
     <meta name="description" content="Apex Motorsport: Showroom for sports cars with incredible performance.">
@@ -17,36 +20,11 @@
 </head>
 <body>
     <main>
-        <header>
-            <nav class="navbar">
-                <img height="40px" src="assets/logo/svg/Apex-Logo.svg" class="nav-branding"
-                    alt="Red White Logo of Apex Motorsport">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="cars.html" class="nav-link">Cars</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="technology.html" class="nav-link">Car Technology</a>
-                    </li>
-                </ul>
-                <div class="hamburger" aria-label="Mobile Navigation Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </header>
-
+        
         <!-- hero section -->
 
         <h1>Contact</h1>
-        <div class="form-container">
+        <div class="form-container carbon">
             <section class="glass">
                 <form id="contact-form">
                     <h2>Please fill this form to send us a message</h2>
@@ -106,43 +84,9 @@
             </section>
         </div>
     </main>
-    <footer class="footer">
-        <div class="container">
-
-            <div class="row">
-                <div class="footer-col">
-                    <ul>
-                        <li class="footer-logo"><a href="index.html">Apex Motorsport</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="imprint.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="imprint.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="imprint.html">Imprint</a></li>
-                    </ul>
-                </div>
-
-                <div class="row">
-                    <div class="footer-col">
-                        <ul>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-    </footer>
+   
+<?php
+include("../templates/footer.php");
+?>
 </body>
 </html>

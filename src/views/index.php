@@ -1,11 +1,15 @@
+<?php
+include("../templates/header.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="code/code.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/code/code.js" defer></script>
     <meta name="description" content="Apex Motorsport: Showroom for sports cars with incredible performance.">
     <link rel="icon" href="assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
@@ -18,40 +22,14 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <nav class="navbar">
-                <img height="40px" src="assets/logo/svg/Apex-Logo.svg" class="nav-branding"
-                alt="Red White Logo of Apex Motorsport">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="cars.html" class="nav-link">Cars</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="technology.html" class="nav-link">Car Technology</a>
-                    </li>
-                </ul>
-                <div class="hamburger" aria-label="Mobile Navigation Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </header>
-
+    <main>   
         <!-- hero section -->
 
         <section class="hero-content">
 
              <div class="hero">
                 <video autoplay muted loop>
-                    <source src="images/hero-images/mp4/ferrari_comp.mp4" type="video/mp4" aria-label="Ferrari LaFerrari edit video">
+                    <source src="../assets/images/hero-images/mp4/ferrari_comp.mp4" type="video/mp4" aria-label="Ferrari LaFerrari edit video">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay"></div>
@@ -87,8 +65,8 @@
     <!-- explore section end -->
 
     <div class="ferrari-rear">
-        <img src="images/hero-images/webp/2015-Ferrari-4.webp" alt="Red Ferrari La Ferrari on the Racetrack" srcset="images/hero-images/webp/2015-Ferrari-4.webp,
-             images/hero-images/jpg/2015-Ferrari-4.jpg" loading="lazy">
+        <img src="../assets/images/hero-images/webp/2015-Ferrari-4.webp" alt="Red Ferrari La Ferrari on the Racetrack" srcset="../assets/images/hero-images/webp/2015-Ferrari-4.webp,
+             ../assets/images/hero-images/jpg/2015-Ferrari-4.jpg" loading="lazy">
     </div>
 
     <!-- porsche yellow gt3 rs -->
@@ -97,14 +75,14 @@
         <h2>The New Porsche GT3 RS</h2>
         <div class="image-gallery">
             <div class="image-item">
-                <img src="images/hero-images/webp/porsche-gt3-front.webp" alt="Porsche GT3 RS in Yellow front view"
-                    loading="lazy" srcset="images/hero-images/webp/porsche-gt3-front.webp,
-                             images/hero-images/jpg/porsche-gt3-front.jpg">
+                <img src="../assets/images/hero-images/webp/porsche-gt3-front.webp" alt="Porsche GT3 RS in Yellow front view"
+                    loading="lazy" srcset="../assets/images/hero-images/webp/porsche-gt3-front.webp,
+                             ../assets/images/hero-images/jpg/porsche-gt3-front.jpg">
             </div>
             <div class="image-item">
-                <img src="images/hero-images/webp/porsche-gt3-rear.webp" alt="Porsche GT3 RS in Yellow rear view"
-                    loading="lazy" srcset="images/hero-images/webp/porsche-gt3-rear.webp,
-                             images/hero-images/jpg/porsche-gt3-rear.jpg">
+                <img src="../assets/images/hero-images/webp/porsche-gt3-rear.webp" alt="Porsche GT3 RS in Yellow rear view"
+                    loading="lazy" srcset="../assets/images/hero-images/webp/porsche-gt3-rear.webp,
+                             ../assets/images/hero-images/jpg/porsche-gt3-rear.jpg">
             </div>
 
         </div>
@@ -117,9 +95,9 @@
 
     <div class="porsche-racetrack">
         <small>The Porsche 911 GT3 RS</small>
-        <img src="images/hero-images/webp/porsche-gt3-racetrack.webp" alt="Porsche GT3 RS on the racetrack"
-            loading="lazy" srcset="images/hero-images/webp/porsche-gt3-racetrack.webp,
-                images/hero-images/jpg/porsche-gt3-racetrack.jpg">
+        <img src="../assets/images/hero-images/webp/porsche-gt3-racetrack.webp" alt="Porsche GT3 RS on the racetrack"
+            loading="lazy" srcset="../assets/images/hero-images/webp/porsche-gt3-racetrack.webp,
+               ../assets/images/hero-images/jpg/porsche-gt3-racetrack.jpg">
     </div>
 
     <section class="quote-section">
@@ -137,7 +115,7 @@
                         presentation makes it easy for you to see why each model is so cool, from performance to looks. You can
                         start your journey into great cars by clicking on each one and discovering a world of fantastic design,
                         awesome features, and pure driving joy.</p>
-                    <button class="explore-button"><a href="cars.html">Explore</a></button>
+                    <button class="explore-button"><a href="cars.php">Explore</a></button>
             </div>
             <button class="view-more view-more-dark">View More</button>
         </div>
@@ -150,54 +128,18 @@
                         the motorsport. Apex Motorsport give an opportunity to dive in a whole new world of the future. Come
                         along as we explore the future together, From astonishing car tech to the adrenaline-fueled world of
                         motorsport, your journey into the extraordinary begins here.</p>
-                    <button class="explore-button"><a href="technology.html">Explore</a></button>
+                    <button class="explore-button"><a href="technology.php">Explore</a></button>
             </div>
             <button class="view-more view-more-dark">View More</button>
         </div>
     </div>
-    
 
 
-    <!-- footer section -->
-    <footer class="footer">
-        <div class="container">
 
-            <div class="row">
-                <div class="footer-col">
-                    <ul>
-                        <li class="footer-logo"><a href="index.html">Apex Motorsport</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="imprint.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="imprint.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="imprint.html">Imprint</a></li>
-                    </ul>
-                </div>
-
-                <div class="row">
-                    <div class="footer-col">
-                        <ul>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-    </footer>
 </body>
 
 </html>
+
+<?php
+include("../templates/footer.php");
+?>

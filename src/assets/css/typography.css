@@ -122,6 +122,24 @@ button {
         font-size: 1.25rem; /* 20px */
     }
 
+    /* font adjustments for the specs on the car page */
+
+    @media (min-width: 1020px) {
+        
+        .car-section h3 {
+          font-size: 34px;
+        }
+
+        .car-section ul li {
+          font-size: 32px;
+          padding: 20px;
+          margin: 0 30px;
+        }
+      
+      }
+
+      /* end */
+
     .logo {
         font-size: 1.75rem; /* 28px */
     }
@@ -148,6 +166,10 @@ button {
 }
 
 @media (min-width: 1024px) {
+    nav ul li a {
+        font-size: 1.5rem; /* 40px */
+    }
+
     h1 {
         font-size: 3.3rem; /* 52.8px */
     }
@@ -168,11 +190,19 @@ button {
         font-size: 1.65rem; /* 26.4px */
     }
 
+    .quote {
+        font-size: 1.9rem;
+    }
+
     span {
         font-size: 1.65rem; /* 26.4px */
     }
 
     button {
         font-size: 1.65rem; /* 26.4px */
+    }
+
+    footer ul li a {
+        font-size: 1.5rem; /* 40px */
     }
 }

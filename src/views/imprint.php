@@ -1,3 +1,7 @@
+<?php
+include("../templates/header.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,45 +9,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Apex Motorsport: imprint and legal information">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/imprint.css">
-    <script src="js/code.js" defer></script>
-    <link rel="icon" href="assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/imprint.css">
+    <script src="../assets/js/code.js" defer></script>
+    <link rel="icon" href="../assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
 
     <title>Imprint</title>
 </head>
 <body>
     <main>
 
-        <!-- navigation -->
-
-        <header>
-            <nav class="navbar">
-                <img height="40px" src="assets/logo/svg/Apex-Logo.svg" class="nav-branding"
-                alt="Red White Logo of Apex Motorsport">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="cars.html" class="nav-link">Cars</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="technology.html" class="nav-link">Car Technology</a>
-                    </li>
-                </ul>
-                <div class="hamburger" aria-label="Mobile Navigation Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-            
-        </header>
+      
 
         <section class="terms">
             <h1>Imprint</h1>
@@ -120,45 +97,10 @@
             </div>
             </section>
             <!-- footer -->
-
-            <footer class="footer">
-                <div class="container">
-        
-                    <div class="row">
-                        <div class="footer-col">
-                            <ul>
-                                <li class="footer-logo"><a href="index.html">Apex Motorsport</a></li>
-                            </ul>
-                        </div>
-        
-                        <div class="footer-col">
-                            <ul>
-                                <li><a href="imprint.html">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-        
-                        <div class="footer-col">
-                            <ul>
-                                <li><a href="imprint.html">Terms & Conditions</a></li>
-                            </ul>
-                        </div>
-        
-        
-                        <div class="footer-col">
-                            <ul>
-                                <li><a href="imprint.html">Imprint</a></li>
-                            </ul>
-                        </div>
-        
-                        <div class="row">
-                            <div class="footer-col">
-                                <ul>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-        
-                    </div>
-            </footer>
+            
 </body>
 </html>
+
+<?php
+include("../templates/footer.php");
+?>
