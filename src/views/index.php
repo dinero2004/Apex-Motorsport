@@ -1,4 +1,12 @@
 <?php
+session_start(); // Start the session
+
+// Display the success message if it exists
+if (isset($_SESSION['success_message'])) {
+    echo "<br><span style='color: green;'>" . htmlspecialchars($_SESSION['success_message']) . "</span>";
+    unset($_SESSION['success_message']); // Clear the message after displaying
+}
+
 include("../templates/header.php");
 ?>
 
@@ -22,50 +30,36 @@ include("../templates/header.php");
 </head>
 
 <body>
-    <main>   
+    <main>
         <!-- hero section -->
 
         <section class="hero-content">
 
-             <div class="hero">
+            <div class="hero">
                 <video autoplay muted loop>
-                    <source src="../assets/images/hero-images/mp4/ferrari_comp.mp4" type="video/mp4" aria-label="Ferrari LaFerrari edit video">
+                    <source src="../assets/images/hero-images/mp4/ferrari_comp.mp4" type="video/mp4"
+                        aria-label="Ferrari LaFerrari edit video">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay"></div>
                 <div class="hero-text">
                     <h1>Apex Motorsport</h1>
                     <h2>Your way to Luxury Cars</h2>
+                    <div class="sidebar-container"> <button onclick="toggleSidebar()" class="view-more">explore</button>
+                </div>
+                <div id="sidebar" class="sidebar-content">
+                <p>Apex Motorsport is a platform for car enthusiasts who are passionate about high-performance engines. It offers the latest car technology news and a lifestyle experience where top performance meets sport, luxury, and style. More than just a website, Apex Motorsport is a project that showcases the brilliance of cars, high-performance tech, and the thrill of the open road, where performance and luxury intersect. Welcome to a world of cars and excitement.</p>
+                </div>
                 </div>
             </div>
         </section>
 
-        <!-- hero-section end -->
-
     </main>
-
-    <!-- explore section  -->
-    <section class="explore-section">
-        <div class="explore-overlay"></div>
-        <div class="accordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">Explore</h2>
-                <div class="accordion-content">
-                    <div class="explore-text">
-                        <p>Our platform is designed for people who are looking for more than just a look at the motorsport. Your passion for cars is ignited by the meticulous selection of each high-end sports car.</p>
-                        <p>Apex Motorsport is your online place to be if you love cars or just want to read about the newest car technology. We're committed to giving you a fun and immersive experience in this world where top performance meets classy style. The latest events happening in performance driving will be shown to you by us.</p>
-                        <p>Apex Motorsport is more than just a website; it's a lifestyle that represents the brilliance of cars, cool tech, and the excitement of the open road. Welcome to a world where performance and luxury meet perfectly.</p>
-                    </div>
-                </div>
-                <button class="view-more view-more-light">View More</button>
-            </div>
-        </div>
-    </section>
-    
     <!-- explore section end -->
 
     <div class="ferrari-rear">
-        <img src="../assets/images/hero-images/webp/2015-Ferrari-4.webp" alt="Red Ferrari La Ferrari on the Racetrack" srcset="../assets/images/hero-images/webp/2015-Ferrari-4.webp,
+        <img src="../assets/images/hero-images/webp/2015-Ferrari-4.webp" alt="Red Ferrari La Ferrari on the Racetrack"
+            srcset="../assets/images/hero-images/webp/2015-Ferrari-4.webp,
              ../assets/images/hero-images/jpg/2015-Ferrari-4.jpg" loading="lazy">
     </div>
 
@@ -75,13 +69,13 @@ include("../templates/header.php");
         <h2>The New Porsche GT3 RS</h2>
         <div class="image-gallery">
             <div class="image-item">
-                <img src="../assets/images/hero-images/webp/porsche-gt3-front.webp" alt="Porsche GT3 RS in Yellow front view"
-                    loading="lazy" srcset="../assets/images/hero-images/webp/porsche-gt3-front.webp,
+                <img src="../assets/images/hero-images/webp/porsche-gt3-front.webp"
+                    alt="Porsche GT3 RS in Yellow front view" loading="lazy" srcset="../assets/images/hero-images/webp/porsche-gt3-front.webp,
                              ../assets/images/hero-images/jpg/porsche-gt3-front.jpg">
             </div>
             <div class="image-item">
-                <img src="../assets/images/hero-images/webp/porsche-gt3-rear.webp" alt="Porsche GT3 RS in Yellow rear view"
-                    loading="lazy" srcset="../assets/images/hero-images/webp/porsche-gt3-rear.webp,
+                <img src="../assets/images/hero-images/webp/porsche-gt3-rear.webp"
+                    alt="Porsche GT3 RS in Yellow rear view" loading="lazy" srcset="../assets/images/hero-images/webp/porsche-gt3-rear.webp,
                              ../assets/images/hero-images/jpg/porsche-gt3-rear.jpg">
             </div>
 
@@ -111,24 +105,26 @@ include("../templates/header.php");
             <h3 class="accordion-header">Discover our range of models:</h3>
             <div class="accordion-content">
 
-                    <p>Check out the amazing cars on our Models page. There is a huge history behind each one. Our simple
-                        presentation makes it easy for you to see why each model is so cool, from performance to looks. You can
-                        start your journey into great cars by clicking on each one and discovering a world of fantastic design,
-                        awesome features, and pure driving joy.</p>
-                    <button class="explore-button"><a href="cars.php">Explore</a></button>
+                <p>Check out the amazing cars on our Models page. There is a huge history behind each one. Our simple
+                    presentation makes it easy for you to see why each model is so cool, from performance to looks. You
+                    can
+                    start your journey into great cars by clicking on each one and discovering a world of fantastic
+                    design,
+                    awesome features, and pure driving joy.</p><br>
+                <button class="explore-button"><a href="cars.php">Explore</a></button><br>
             </div>
             <button class="view-more view-more-dark">View More</button>
         </div>
-    
+
         <div class="accordion-item technology-section">
             <h3 class="accordion-header">Explore futuristic car technology:</h3>
             <div class="accordion-content">
 
-                    <p>On our website you can see the newest car technology of our future the most exiting innovations in
-                        the motorsport. Apex Motorsport give an opportunity to dive in a whole new world of the future. Come
-                        along as we explore the future together, From astonishing car tech to the adrenaline-fueled world of
-                        motorsport, your journey into the extraordinary begins here.</p>
-                    <button class="explore-button"><a href="technology.php">Explore</a></button>
+                <p>On our website you can see the newest car technology of our future the most exiting innovations in
+                    the motorsport. Apex Motorsport give an opportunity to dive in a whole new world of the future. Come
+                    along as we explore the future together, From astonishing car tech to the adrenaline-fueled world of
+                    motorsport, your journey into the extraordinary begins here.</p><br>
+                <button class="explore-button"><a href="technology.php">Explore</a></button><br>
             </div>
             <button class="view-more view-more-dark">View More</button>
         </div>

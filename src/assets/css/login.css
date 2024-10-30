@@ -1,0 +1,223 @@
+body {
+    background: white;
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+main {
+    width: 100%;
+    display: flex;
+    min-height: 120vh; /* Dynamic viewport height (increase from 80vh) */
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    margin-top: 120px;
+    margin-bottom: 100px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background: white;
+    display: grid;
+    grid-gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+            0 6px 20px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    grid-column: span 2;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: black;
+}
+
+button {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    box-shadow: inset;
+}
+
+button:hover {
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.button-container a{
+    color: black;
+}
+
+.button-container a:hover{
+    color: rgb(141, 0, 0);
+}
+
+form label {
+    font-size: 1rem;
+    color: black;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+form input {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    color: black;
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+form .full-width {
+    grid-column: span 2;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Title section with radio buttons */
+.title {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.radio-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    flex-direction: row;
+}
+
+.radio-input > label {
+    margin-right: 10px;
+}
+
+.title > input {
+    transform: scale(1.5); 
+    margin-right: 10px;
+}
+
+/* Comment and country sections */
+.comment, .country {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid black;
+}
+
+.comment > textarea {
+    width: 100%;
+    height: 50px;
+}
+
+/* Select dropdown styling */
+select {
+    font-size: 1.2rem;  
+    padding: 10px;     
+    border-radius: 4px; 
+    border: 1px solid #000;
+}
+
+/* Terms section */
+.terms {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+.terms > label > a {
+    color: black;
+    text-decoration: underline;
+}
+
+small {
+    color: black;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+/* Tooltip text style */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%; /* Adjust based on tooltip placement */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.show_pass label {
+    color: black;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+    }
+}

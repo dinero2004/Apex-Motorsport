@@ -1,7 +1,7 @@
 
 body {
-    background-image: linear-gradient(#0F0F0F, #BD1923, #0F0F0F); 
-    background-image: -o-linear-gradient(top, #0F0F0F, #BD1923, #0F0F0F); 
+    background-image: linear-gradient(#0F0F0F, #0A6786, #0F0F0F);
+    background-image: -o-linear-gradient(top, #0F0F0F, #0A6786, #0F0F0F);    
     background-position: center; 
     background-attachment: fixed; }
 
@@ -10,11 +10,6 @@ section {
     background: #0F0F0F;
     color: white;
 }
-
-section > .acordion-content .accordion-header {
-    background: black;
-    color: white;
-  }
 
 h1 {
     padding: 40px;
@@ -61,6 +56,17 @@ h1 {
 
 /* rimac nevera section */
 
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    grid-template-rows: repeat(1, auto);   
+    gap: 20px;                             
+    justify-content: center;
+    align-content: center;
+}
+
+
+
 .rimac-content {
     margin: 40px 20px 40px 20px;
 }
@@ -94,8 +100,27 @@ h1 {
     .hero-image {
         padding: 16px;
     }
+    
+    .tech-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-auto-rows: auto;       /* Each row adjusts to the content height */
+        gap: 20px;                  /* Spacing between items */
+        align-content: start;       /* Align items to the start */
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    }
 
+
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(1fr);                   
+    align-content: center;
+    margin: 20px;
 }
+
 
 /* car technology news style */
 

@@ -5,6 +5,7 @@ include("../templates/header.php");
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,24 +19,36 @@ include("../templates/header.php");
     <link rel="shortcut icon" href="../assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
     <title>Cars</title>
 </head>
+
 <body>
     <main>
 
         <!-- hero section -->
 
         <main>
-            <div class="hero-background">
-                <div class="hero-section glass">
+            <div class="hero-content">
+                <div class="hero">
+                    <video autoplay muted loop>
+                        <source src="../assets/images/cars-images/mp4/Lamborghini_Aventador_SVJ.mp4" type="video/mp4"
+                            aria-label="Ferrari LaFerrari edit video">
+                        Your browser does not support the video tag.
+                    </video>
                     <h1>The Car Models</h1>
-                    <p>
-                        Start your journey with extraordinary automobiles. The careful selection of each vehicle will
-                        elevate your experience by the careful selection of each vehicle. Whether you're into cars or
-                        just
-                        curious about top-notch auto craftsmanship, Apex invites you to discover the intricate details,
-                        specifications, and tales behind each vehicle. We're committed to providing a presentation,
-                        where
-                        each step opens up a world where performance meets perfection.</p>
-                </div>
+                    <div class="sidebar-container"> <button onclick="toggleSidebar()" class="view-more">explore</button></div>
+                    <div id="sidebar" class="sidebar-content">
+                        <p>
+                            Start your journey with extraordinary automobiles. The careful selection of each vehicle
+                            will elevate your
+                            experience by the careful selection of each vehicle. Whether you're into cars or just
+                            curious about auto craftsmanship,
+                            Apex invites you to discover the intricate details, specifications and tales behind each
+                            vehicle. We're committed to providing a presentation, where each step opens up a world
+                            where performance meets perfection.
+                        </p>
+            </div>
+            </div>
+        
+                    </div>
             </div>
         </main>
         <div class="nissan-racetrack">
@@ -113,7 +126,7 @@ include("../templates/header.php");
                         technical perfection and refined aesthetics. Welcome to the world of the Audi R8, where
                         performance and design merge into an impressive symbiosis.</p>
                 </div>
-                <button class="view-more view-more-dark">View More</button>
+                <button class="view-more view-more-ligh">View More</button>
             </div>
         </div>
 
@@ -197,7 +210,7 @@ include("../templates/header.php");
                         elegance that defines Ferrari. Its breathtaking lines and aerodynamic shapes not only visually
                         captivate but also enhance performance on the road.</p>
                 </div>
-                <button class="view-more view-more-dark">View More</button>
+                <button class="view-more view-more-light">View More</button>
             </div>
         </div>
 
@@ -260,7 +273,7 @@ include("../templates/header.php");
 
         <div class="main-section"></div>
         <div class="accordion">
-            <div class="accordion-item">
+            <div class="accordion-item .accordion-header-light">
                 <h3 class="accordion-header">Description</h3>
                 <div class="accordion-content">
                     <p>The Porsche GT3 RS is not just a car; it's a thrilling ode to precision and power, like a
@@ -281,15 +294,10 @@ include("../templates/header.php");
                         becomes an adventure. The engine's roar isn't just a sound; it's a proclamation of unleashed
                         power.</p>
                 </div>
-                <button class="view-more view-more-dark">View More</button>
+                <button class="view-more view-more-light">View More</button>
             </div>
         </div>
-
-
-
-
-</body>
-
+    </body>
 </html>
 
 

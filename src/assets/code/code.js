@@ -70,3 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.to('.explore-overlay', { opacity: 1, duration: 0.5, delay: 0.4 });
     }
 });
+
+// Sidebar animations
+
+    // JavaScript to open and close the sidebar
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show"); // Toggle the "show" class
+    }
