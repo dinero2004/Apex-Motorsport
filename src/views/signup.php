@@ -1,5 +1,5 @@
 <?php 
-include("../public/signup_valid.php");
+include("../validation/signup_valid.php");
 include("../templates/header.php");
 
 // variables with posted values or set to empty string

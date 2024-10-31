@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        const response = await fetch('json/data.json');
+        const response = await fetch('../json/data.json');
         const data = await response.json();
         displayBlogPosts(data.car_technology_news);
     } catch (error) {

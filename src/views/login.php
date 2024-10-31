@@ -1,5 +1,5 @@
 <?php 
-include("../public/login_valid.php");
+include("../validation/login_valid.php");
 include("../templates/header.php");
 
 $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '';
