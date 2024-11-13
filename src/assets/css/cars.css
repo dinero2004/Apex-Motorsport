@@ -10,14 +10,115 @@ h1, h2 {
 }
 
 h3 {
-    padding: 10px;
+    margin: 40px 0;
 }
 
 body {
     background: #0f0f0f;
     color: white;
+
+
+  }
+/* The Modal (background) */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption of Modal Image */
+.modal-caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #ccc;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* Image Gallery Styles */
+.image-gallery-container .images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: auto; /* Automatically adjust row height */
+  gap: 15px;
+  padding: 10px;
+  justify-items: center; /* Center images in each grid cell */
+  align-items: center;
+}
+
+.car-image-item img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.car-image-item img:hover {
+  transform: scale(1.1);
+}
+
+form {
+  margin: 20px 
+  padding 10px
+}
+
+/* Style for the label */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+    display: block;
+    padding: 10px;
+}
+
+select{
+  padding: 10px;
+}
+
+form > label, select {
+  margin: 0 40px;
+}
+
+/* Container for centering the dropdowns */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+}
 
   @media (max-width: 768px) {
 
@@ -48,59 +149,31 @@ body {
 /* section grid */
 
 .car-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px; /* Spacing between columns */
   background: #0f0f0f;
   color: white;
-  gap: 10px;
-  padding:24px;
-}
-
-.car-section h3 {
-  padding: 10px;
-  margin: 20px;
-}
-
-.car-section ul li {
-  padding: 10px;
-  margin: 0 20px;
+  padding: 20px;
+  align-items: start; /* Align content at the top */
 }
 
 
+.specs li {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .car-section {
-      grid-template-columns: 1fr;
-  }}
-
-
-  @media (min-width: 1020px) {
-    .car-section {
-      align-items: center;
-      justify-content: center;
-      padding: 50px;
-    }
-
-
-    .car-section h3 {
-      font-size: 34px;
-    }
-  
-  
-
-    .car-section ul li {
-      font-size: 32px;
-      padding: 20px;
-      margin: 0 30px;
-    }
-  
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 30px;
   }
-
-/* add specs css here */
-/* new image gallery */
-
-/* new image gallery */
+}
 
 .main-img {
+  align-items: center;
   grid-column: span 3;
   grid-row: span 2;
   width: 100%;
@@ -126,6 +199,7 @@ body {
   grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   padding: 10px;
+  align-items: right;
 }
 
 .images img {
@@ -133,6 +207,17 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.car-image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hover effect */
+.car-image-item:hover {
+  transform: scale(1.05);
 }
 
 /* Fade in animation */

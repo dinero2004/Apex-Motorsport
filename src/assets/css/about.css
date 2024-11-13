@@ -4,62 +4,87 @@ body {
 
 .main-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-columns: repeat(2, 1fr); /* Two columns on large screens */
     grid-template-rows: repeat(3, 1fr);    /* Three equal rows */
-    gap: 0; /* No gap between items */
-    height: 100%; /* Full height to center items */
-    width: 100vw; /* Full width of the viewport */
-    padding: 32px 0;
+    gap: 16px; /* Small gap between items */
+    height: auto; /* Adjusts to content height */
+    width: 90vw; /* Reduced width to prevent overflow */
+    padding: 24px 0;
+    margin: auto; /* Center main section */
 }
 
 h1 {
-    grid-column: span 2; /* Centered title across columns */
-    margin-bottom: 40px; /* Remove margin for consistency */
+    grid-column: span 2;
+    margin: 32px;
     color: white;
-    text-align: center;
 }
 
 .section-item {
-    padding: 0; /* Remove padding for full coverage */
+    padding: 8px; /* Reduced padding */
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* For positioning img */
-    max-width: 800px; /* Set a maximum width for each section item */
-    margin: auto; /* Center section items */
+    position: relative;
+    max-width: 600px; /* Smaller max width */
+    margin: auto;
 }
 
 .section-item img {
     width: 100%;
-    height: auto; /* Adjust height automatically to maintain aspect ratio */
-    object-fit: cover; /* Cover the entire section item */
+    height: auto;
+    object-fit: cover;
 }
 
 .section-item div {
-    text-align: center; /* Center text horizontally */
+    text-align: left;
 }
 
 .section-item p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .section-item h2 {
-    margin-bottom: 10px; /* Add space between h2 and p */
+    margin-bottom: 8px;
 }
 
-/* Mobile Styles (max-width: 767px) */
-@media (max-width: 767px) {
+/* Medium Devices (Tablets - max-width: 1024px) */
+@media (max-width: 1024px) {
     .main-section {
-        grid-template-columns: 1fr; /* Single column on mobile */
-        grid-template-rows: auto; /* Adjusts to content height */
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 16px 0;
+        width: 85vw; /* Reduce width on tablets */
     }
 
     .section-item {
-        padding: 15px; /* Adjust padding on mobile */
+        max-width: 500px; /* Smaller max width */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small Devices (Mobile - max-width: 767px) */
+@media (max-width: 767px) {
+    .main-section {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto;
+        padding: 8px 0;
+        width: 80vw; /* Reduced width on mobile */
+    }
+
+    .section-item {
+        max-width: 90vw; /* Full width minus padding */
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
     }
 }

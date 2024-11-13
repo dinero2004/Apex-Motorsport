@@ -13,7 +13,7 @@
                 <a href="../views/about.php" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-                <a href="../views/cars.php" class="nav-link">Cars</a>
+                <a href="../views/car_model.php" class="nav-link">Cars</a>
             </li>
             <li class="nav-item">
                 <a href="../views/technology.php" class="nav-link">Car Technology</a>
