@@ -1,3 +1,4 @@
+// Real Time JavaScript Validation
 // document.querySelector("button").addEventListener("click", validateForm);
 
 // document.querySelectorAll("input, textarea").forEach((input) => {
@@ -143,12 +144,26 @@
 //     spanElement.textContent = message;
 // }
 
+// Function to toggle visibility for the password input
+function togglePassword() {
+  var passwordField = document.getElementById("password");  // Get the password input field
+  var checkbox = document.querySelector('input[name="password"] + .show_pass');  // Get the checkbox next to the password field
 
-function myFunction() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
+  if (checkbox.checked) {
+      passwordField.type = "text";  // Show the password
+  } else {
+      passwordField.type = "password";  // Hide the password
   }
+}
+
+// Function to toggle visibility for the confirm password input
+function toggleConfirmPassword() {
+  var confirmPasswordField = document.getElementById("confirm_password");  // Get the confirm password input field
+  var checkbox = document.querySelector('input[name="confirm_password"] + .show_pass');  // Get the checkbox next to the confirm password field
+
+  if (checkbox.checked) {
+      confirmPasswordField.type = "text";  // Show the confirm password
+  } else {
+      confirmPasswordField.type = "password";  // Hide the confirm password
+  }
+}

@@ -50,7 +50,7 @@ include("../templates/header.php");
 <body>
     <main>
         <h1>Account Created Successfully!</h1>
-        <p>Your account has been created. You can now <a href="login.php">log in</a>.</p>
+        <p>Your account has been created. You can now <a href="signin.php">log in</a>.</p>
     </main>
 
 </body>

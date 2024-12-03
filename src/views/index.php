@@ -111,7 +111,7 @@ include("../templates/header.php");
                     start your journey into great cars by clicking on each one and discovering a world of fantastic
                     design,
                     awesome features, and pure driving joy.</p><br>
-                <button class="explore-button"><a href="cars.php">Explore</a></button><br>
+                <button class="explore-button"><a href="car_model.php">Explore</a></button><br>
             </div>
             <button class="view-more view-more-dark">View More</button>
         </div>
@@ -124,7 +124,7 @@ include("../templates/header.php");
                     the motorsport. Apex Motorsport give an opportunity to dive in a whole new world of the future. Come
                     along as we explore the future together, From astonishing car tech to the adrenaline-fueled world of
                     motorsport, your journey into the extraordinary begins here.</p><br>
-                <button class="explore-button"><a href="technology.php">Explore</a></button><br>
+                <button class="explore-button"><a href="technology_blog.php">Explore</a></button><br>
             </div>
             <button class="view-more view-more-dark">View More</button>
         </div>

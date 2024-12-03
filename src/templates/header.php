@@ -16,13 +16,13 @@
                 <a href="../views/car_model.php" class="nav-link">Cars</a>
             </li>
             <li class="nav-item">
-                <a href="../views/technology.php" class="nav-link">Car Technology</a>
+                <a href="../views/technology_blog.php" class="nav-link">Car Technology</a>
             </li>
             <li class="nav-item">
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="../validation/logout.php">Logout</a>
                 <?php else: ?>
-                    <a href="login.php">Login</a>
+                    <a href="signin.php">Sign In</a>
                 <?php endif; ?>
             </li>
         </ul>

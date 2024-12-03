@@ -5,7 +5,7 @@
         <div class="row">
             <div class="footer-col">
                 <ul>
-                    <li class="footer-logo"><a href="index.html">Apex Motorsport</a></li>
+                    <li class="footer-logo"><a href="../views/index.php">Apex Motorsport</a></li>
                 </ul>
             </div>
             <div class="footer-col">

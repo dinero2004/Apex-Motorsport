@@ -1,5 +1,5 @@
 <?php 
-include("../validation/login_valid.php");
+include("../validation/signin_valid.php");
 include("../templates/header.php");
 
 $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '';
@@ -11,20 +11,22 @@ $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/sign.css">
     <script src="../assets/code/code.js"></script>
     <script src="../assets/code/login.js"></script>
     <link rel="icon" href="/src/assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/src/assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
     <title>Login</title>
     <style>
-        .error { color: red; font-size: 0.9em; }
+        .error { color: red; font-size: 0.9em; 
+            font-size: 12px;
+            padding: 10px;}
         .valid { color: green; font-size: 0.9em; }
     </style>
 </head>
 <body>
 <main> 
-    <h1>Login</h1>
+    <h1>Sign In</h1>
     <?php if (!empty($errors)): ?>
         <div>
             <?php foreach ($errors as $error): ?>
@@ -32,22 +34,22 @@ $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '
         </div>
     <?php endif; ?>
 
-    <form action="login.php" method="POST">
+    <form action="signin.php" method="POST">
         <div>
             <label for="username">Username:</label>
-            <input type="text" name="username" value="<?= $username; ?>" required>
+            <input type="text" name="username" value="<?= $username; ?>">
             <span class="error"><?= in_array("Username not found.", $errors) ? "Username not found." : ''; ?></span>
         </div>
 
         <div>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-            <input type="checkbox" onclick="myFunction()" class="show_pass"><label>Show Password</label>
+            <input type="password" name="password" id="password">
+            <input type="checkbox" onclick="togglePassword()" class="show_pass"><small>Show Password</small>
             <span class="error"><?= in_array("Incorrect password.", $errors) ? "Incorrect password." : ''; ?></span>
         </div>
         
         <div class="button-container">
-            <button type="submit">Login</button>
+            <button type="submit">Sign In</button>
             <a href="signup.php">Sign Up</a>
             <a href="index.php">Go back</a>
         </div>

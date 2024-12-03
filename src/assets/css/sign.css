@@ -159,6 +159,8 @@ select {
 
 small {
     color: black;
+    font-size: 12px;
+    padding: 10px;
 }
 
 /* Tooltip styling */
