@@ -16,8 +16,6 @@ Apex Motorsport is a digital showroom for showcasing sports cars. This project i
 
 The project's folder structure is organized as follows:
 
-```plaintext
-src
 ├── assets
 │   ├── code              # JavaScript functionalities
 │   ├── css               # Styling files for web pages
@@ -25,42 +23,35 @@ src
 │   ├── favicon           # Favicon assets
 │   ├── fonts             # Fonts used on the website
 │   ├── images            # Images for web pages, organized by format (webp, png, jpg, mp4)
-|   ├── uploads
-        ├── folder_1       
-│       ├── folder_2         
-|       ├── folder_3 
+│   ├── uploads
 │   ├── json              # JSON data for blog posts
 │   └── logo              # Logo assets
-├── config
-│   └── request.php       # Database connection setup
-├── class
-│   |── formValidator.class.php  # Class for the validation (sign up)
-|   |── RawUpload.class.php      # Class foe the file upload logic
-|   └── user..class.php          # Classfor the user setup
-|
+├── Controller
+│   ├── FormValidator.php     # Class for validation (sign up)
+│   ├── Login.php             # Handles session checks and sanitizes user input
+│   ├── Logout.php            # Manages session termination
+│   ├── Register.php          # Sanitizes and validates user input
+│   ├── Upload.php            # Validates file uploads
+│   └── UploadController.php  # Processes file uploads
+├── Model
+│   ├── CarModel.php      # Retrieves car model information from the database
+│   ├── Database.php      # Database configuration file
+│   ├── LoginModel.php    # Searches for users in the database
+│   ├── RegisterModel.php # Handles user registration logic and inserts new users into the database
+│   └── UploadModel.php   # Manages uploads and saves file paths in the database
 ├── templates
 │   ├── header.php        # Header navigation
 │   └── footer.php        # Footer section
-├── controller            # Controller keeps all the logic of the dynamic pages.
-    ├── carModelHandler.php # Handles the data of the car model page.
-    ├── uploadHandler.php # Handles the file upload on the technology page.
-|
-├── views                 # Visible web pages
+├── views
 │   ├── about.php         # About page
-│   ├── cars.php          # Cars page old page layout(in case of remaking)
-|   ├── car_model.php     # New dynamic car model page
+│   ├── cars.php          # Cars page (old layout)
 │   ├── confirm.php       # Account confirmation page
 │   ├── imprint.php       # Terms and conditions page
 │   ├── index.php         # Home page
 │   ├── login.php         # Login page
-│   ├── signup.php        # Signup (create account) page
+│   ├── register.php      # Registration page
+│   ├── reviews.php       # Reviews page for users
 │   └── technology.php    # Technology details page
-└── validation            # PHP scripts for form validation and user management
-    ├── login_valid.php   # Login validation
-    ├── signup_valid.php  # Account creation and validation
-    └── logout.php        # Session termination
-```
-
 
 
 ## Setup Instructions
