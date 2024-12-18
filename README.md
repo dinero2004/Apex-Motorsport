@@ -22,7 +22,7 @@ The project's folder structure is organized as follows:
 │   ├── sql               # SQL file with database for setup
 │   ├── favicon           # Favicon assets
 │   ├── fonts             # Fonts used on the website
-│   ├── images            # Images for web pages, organized by format (webp, png, jpg, mp4)
+│   ├── images            # Images for web pages, organized by format  (webp, png, jpg, mp4)
 │   ├── uploads
 │   ├── json              # JSON data for blog posts
 │   └── logo              # Logo assets
