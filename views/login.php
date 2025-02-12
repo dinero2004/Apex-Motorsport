@@ -1,5 +1,7 @@
 <?php 
-require("../Controller/Login.php");
+
+
+require("../Controller/LoginController.php");
 include("../templates/header.php");
 
 // Initialize $errors as an empty array to prevent errors
@@ -52,7 +54,7 @@ $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '
         
         <div class="button-container">
             <button type="submit">Sign In</button>
-            <a href="signup.php">Sign Up</a>
+            <a href="register.php">Sign Up</a>
             <a href="index.php">Go back</a>
         </div>
     </form>

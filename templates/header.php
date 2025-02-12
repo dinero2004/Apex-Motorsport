@@ -1,6 +1,9 @@
 <?php 
 session_start();
 
+// Determine if the user is logged in and if they are an admin
+$isLoggedIn = isset($_SESSION['auth_status']) && $_SESSION['auth_status'];
+$isAdmin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
 ?>
 <header>
     <nav class="navbar">
@@ -18,26 +21,35 @@ session_start();
     <!-- Fullscreen dropdown content -->
     <div class="dropdown-mask" id="dropdown">
         <div class="links-container">
+            <!-- Navigation Links -->
             <a href="../views/index.php" data-image="image1">Home</a>
             <a href="../views/about.php" data-image="image2">About</a>
             <a href="../views/cars.php" data-image="image3">Cars</a>
             <a href="../views/technology.php" data-image="image4">Tech</a>
 
-            <!-- Reviews link visible only if the user is logged in -->
-            <?php if (isset($_SESSION['auth_status'])): ?>
-                <a href="../views/reviews.php" data-image="image5">Reviews</a>
-                <a href="../Controller/logout.php" data-image="image5">Logout</a>
+            <!-- Conditional links for admin -->
+            <?php if ($isAdmin): ?>
+                <a href="../views/cms_folder/cms_dashboard.php" data-image="image5">CMS Dashboard</a>
+            <?php endif; ?>
+
+            <!-- Conditional links for logged-in users -->
+            <?php if ($isLoggedIn): ?>
+                <a href="../Controller/logout.php">Logout</a>
             <?php else: ?>
                 <a href="../views/login.php" data-image="image6">Sign In</a>
             <?php endif; ?>
         </div>
+
+        <!-- Image container for hover effects -->
         <div class="image-container">
             <img src="../assets/images/cars/manufacturers/ferrari/models/488 Pista/2019-ferrari-488-pista-103-1528476282.jpg" id="image1" alt="Image 1" class="active">
             <img src="../assets/images/about-images/png/lm-ferrari.png" alt="About" id="image2">
             <img src="../assets/images/cars/manufacturers/Lamborghini/models/Aventador S/2018-lamborghini-aventador-s-roadster-101-1524083700.jpg" alt="Cars" id="image3">
             <img src="../assets/images/technology/jpg/rimac-nevera-front.jpg" alt="Technology" id="image4">
-            <img src="../assets/images/cars/manufacturers/McLaren/models/P1/2014-mclaren-p1-photo-617370-s-986x603.jpg" alt="Reviews" id="image5">
-            <img src="../assets/images/cars/manufacturers/Porsche/models/911 Turbo S/2021-porsche-911-turbo-s-pdk-107-edit-1608061336.jpg" alt="Reviews" id="image6">
+            <img src="../assets/images/cars/manufacturers/McLaren/models/P1/2014-mclaren-p1-photo-617370-s-986x603.jpg" alt="CMS Dashboard" id="image5">
+            <img src="../assets/images/cars/manufacturers/Porsche/models/918 Spyder/2015-porsche-918-spyder-interior-photo-611082-s-986x603.jpg" alt="Reviews" id="image6">
+            <img src="../assets/images/cars/manufacturers/Porsche/models/911 Turbo S/2021-porsche-911-turbo-s-pdk-107-edit-1608061336.jpg" alt="Logout" id="image7">
+            <img src="../assets//cars/manufacturers/Mclaren/models/P1/2014-mclaren-p1-interior-photo-617431-s-986x603.jpg" alt="Sign In" id="image8">
         </div>
     </div>
 </header>

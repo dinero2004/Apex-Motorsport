@@ -1,5 +1,5 @@
 <?php 
-include("../Controller/Register.php");
+include("../Controller/RegisterController.php");
 include("../templates/header.php");
 
 // Initialize form data and form validator
@@ -120,7 +120,7 @@ $formValidator = isset($formValidator) ? $formValidator : null;
 
         <div class="full-span button-container">
             <button type="submit">Register</button>
-            <a href="signin.php">Sign In</a>
+            <a href="login.php">Sign In</a>
             <a href="index.php">Go back</a>
         </div>
     </form>

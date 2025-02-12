@@ -11,7 +11,7 @@ class Upload {
 
     function __construct($config_upload) {
         // Fixed upload directory (uploads)
-        $this->targetDir = '..assets/uploads'; // You can change this path if needed
+        $this->targetDir = ''; // You can change this path if needed
 
         $this->allowedMimeTypes = $config_upload['allowedMimeTypes'];
         $this->allowedExtensions = $config_upload['allowedExtensions'];
@@ -106,16 +106,32 @@ class Upload {
         return !$hasErrors;
     }
 
-    // Move file to target directory
-    public function moveFile() {
+    // Move file to the target directory and rename it
+    public function moveFile($modelName) {
         if (is_uploaded_file($_FILES['myFile']['tmp_name'])) {
             $tmp_name = $_FILES["myFile"]["tmp_name"];
             $name = basename($_FILES["myFile"]["name"]);
-            $timestamp = time();
+            
+            // Remove spaces and other special characters in file name
+            $name = preg_replace('/\s+/', '_', $name);  // Replace spaces with underscores
+            $name = preg_replace('/[^a-zA-Z0-9-_\.]/', '', $name);  // Remove special characters
+            
+            // Add a unique timestamp to the name to avoid collisions
+            $timestamp = time() . rand(1000, 9999);  // Adding random number to ensure uniqueness
 
-            // Move the uploaded file to the 'uploads' folder with timestamp
-            if (move_uploaded_file($tmp_name, $this->targetDir . "/" . $timestamp . "-" . $name)) {
-                return $timestamp . "-" . $name;
+            // Construct the model's target directory
+            $modelFolder = "../assets/images/cars/manufacturers/{$modelName}/";
+
+            // Check if the directory exists, if not, create it
+            if (!is_dir($modelFolder)) {
+                mkdir($modelFolder, 0777, true);  // Create directory with proper permissions
+            }
+
+            // Move the uploaded file to the specific model folder with the new name
+            $newFilePath = $modelFolder . $timestamp . "-" . $name;
+
+            if (move_uploaded_file($tmp_name, $newFilePath)) {
+                return $newFilePath;
             } else {
                 $this->errorsArr[] = "Possible file upload attack!";
                 return false;
@@ -129,4 +145,6 @@ class Upload {
         return $this->errorsArr;
     }
 }
+
+
 

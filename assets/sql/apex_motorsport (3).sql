@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 18, 2024 at 10:34 PM
+-- Generation Time: Jan 09, 2025 at 08:28 PM
 -- Server version: 8.0.35
 -- PHP Version: 8.2.20
 
@@ -50,7 +50,7 @@ INSERT INTO `Cars` (`car_id`, `model_name`, `horsepower`, `engine_type`, `engine
 (16, '911 Turbo S', 650, 'Flat-6', 3.80, 330, 207000.00, 1640, 2),
 (17, 'Cayman GT4 RS', 500, 'Flat-6', 4.00, 302, 142000.00, 1415, 2),
 (18, 'Taycan Turbo S', 761, 'Electric', 0.00, 260, 185000.00, 2295, 2),
-(19, 'SF90 Stradale', 1000, 'V8 Hybrid', 4.00, 340, 625000.00, 1570, 3),
+(19, 'SF90 Stradale', 1000, 'V8 Hybrid', 4.00, 340, 625000.00, 1571, 3),
 (20, '488 Pista', 720, 'V8', 3.90, 340, 350000.00, 1280, 3),
 (21, 'Roma', 620, 'V8', 3.90, 320, 222000.00, 1472, 3),
 (22, '720S', 720, 'V8', 4.00, 341, 299000.00, 1419, 4),
@@ -62,7 +62,7 @@ INSERT INTO `Cars` (`car_id`, `model_name`, `horsepower`, `engine_type`, `engine
 (28, 'Panamera Turbo S', 620, 'V8', 4.00, 315, 179000.00, 2035, 2),
 (29, 'Cayenne Turbo GT', 631, 'V8', 4.00, 300, 182000.00, 2200, 2),
 (30, '911 GT3', 510, 'Flat-6', 4.00, 318, 163000.00, 1418, 2),
-(31, '812 Superfast', 789, 'V12', 6.50, 340, 335000.00, 1630, 3),
+(31, '812 Superfast', 789, 'V12', 6.50, 341, 335000.00, 1630, 3),
 (32, 'Portofino M', 612, 'V8', 3.90, 320, 226000.00, 1664, 3),
 (33, 'F8 Tributo', 710, 'V8', 3.90, 340, 280000.00, 1330, 3),
 (34, 'McLaren GT', 612, 'V8', 4.00, 326, 210000.00, 1530, 4),
@@ -79,7 +79,11 @@ INSERT INTO `Cars` (`car_id`, `model_name`, `horsepower`, `engine_type`, `engine
 (45, 'California T', 553, 'V8 Turbo', 3.90, 315, 202000.00, 1730, 3),
 (46, '765LT', 755, 'V8', 4.00, 330, 358000.00, 1339, 4),
 (47, '570S', 562, 'V8', 3.80, 328, 191000.00, 1450, 4),
-(48, 'P1 GTR', 986, 'Hybrid V8', 3.80, 350, 2200000.00, 1440, 4);
+(48, 'P1 GTR', 986, 'Hybrid V8', 3.80, 350, 2200000.00, 1440, 4),
+(63, 'GT2 ', 800, 'Flat-6', 4.00, 300, 335000.00, 1630, 2),
+(67, 'Carrera GT', 600, 'V10', 5.00, 330, 430000.00, 1700, 2),
+(73, 'F40', 450, 'twin-turbocharged V8', 4.00, 300, 400000.00, 1300, 3),
+(93, 'test', 1, '2', 3.00, 4, 5.00, 6, 2);
 
 -- --------------------------------------------------------
 
@@ -177,14 +181,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `lastname`, `firstname`, `email`, `password`, `country`, `comment`, `title`, `is_admin`) VALUES
-(35, 'Lazar', '', '', 'lazar.minkov@gmail.com', '$2y$10$qoQmjbwbSPZ.OZIG4lEWQeWaPzTvMgOavI2xqsj2odZSI9Hch/G56', 'Switzerland', '', 'male', 0),
-(36, 'Ivana', '', '', 'ivana.dan.pencheva@gmail.com', '$2y$10$00tseCWbGBFe1S7JHBUwEe9GY8t4kj4Do2C8LxwvtEf5SdYoWN1De', 'Switzerland', '', 'female', 0);
-
---
 -- Indexes for dumped tables
 --
 
@@ -229,13 +225,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `Cars`
 --
 ALTER TABLE `Cars`
-  MODIFY `car_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `car_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `Manufacturers`
 --
 ALTER TABLE `Manufacturers`
-  MODIFY `manufacturer_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `manufacturer_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `reviews`
@@ -253,7 +249,7 @@ ALTER TABLE `uploads`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- Constraints for dumped tables

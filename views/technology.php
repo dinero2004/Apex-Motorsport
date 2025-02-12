@@ -2,7 +2,6 @@
 
 <?php
 require("../templates/header.php");
-require("../Controller/UploadController.php");
 ?>
 
 <!DOCTYPE html>
@@ -108,24 +107,6 @@ require("../Controller/UploadController.php");
         <!-- container end -->
     </div>
     <!-- end of rimac nevera section -->
-
-    <!-- upload form -->
-
-    <?= $feedback ?>
-    <form method="post" enctype="multipart/form-data">
-        <input type="hidden" name="MAX_FILE_SIZE" value="<?= $config_upload['maxFileSize'] ?>">
-        <div>
-            <label for="myFile">Select File:</label>
-            <input type="file" name="myFile" id="myFile">
-        </div>
-        <div>
-            <label for="normalo">Alternative Text:</label>
-            <input name="normalo" type="text" id="normalo">
-        </div>
-        <div>
-            <button type="submit" name="go" class="button">Upload</button>
-        </div>
-    </form>
 
 </body>
 </html>

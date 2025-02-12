@@ -7,7 +7,7 @@ class Database {
     private $db_name = "apex_motorsport";
     private $charset = "utf8";
     private $pdo = null;
-    private $dbStmt; // To hold prepared statement
+    private $dbStmt; 
 
     // Connect method: Establish a connection to the database
     public function connect() {
@@ -86,4 +86,3 @@ class Database {
     }
 }
 
-?>

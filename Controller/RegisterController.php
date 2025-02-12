@@ -1,7 +1,5 @@
 <?php
 // Define the session cookie
-define('SESSIONCOOKIE', 'my_custom_session');
-session_name(SESSIONCOOKIE);
 session_start();
 
 // Include the necessary files
@@ -30,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (empty($formValidator->errors)) {
             $data = [
                 'username' => $formValidator->data['personal_info']['username'],
-                'first_name' => $formValidator->data['personal_info']['first_name'],
-                'last_name' => $formValidator->data['personal_info']['last_name'],
+                'firstname' => $formValidator->data['personal_info']['firstname'],
+                'lastname' => $formValidator->data['personal_info']['lastname'],
                 'email' => $formValidator->data['personal_info']['email'],
                 'password' => password_hash($formValidator->data['personal_info']['password'], PASSWORD_BCRYPT),
                 'country' => $formValidator->data['additional_info']['country'],

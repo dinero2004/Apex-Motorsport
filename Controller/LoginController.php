@@ -1,22 +1,26 @@
 <?php
 session_start();
 
-require_once('FormValidator.php');
-require_once('../Model/LoginModel.php');
-
+require_once(__DIR__ . '/FormValidator.php');
+require_once __DIR__ . '/../Model/LoginModel.php';
+require_once __DIR__ . '/UserController.php';
+require_once __DIR__ . '/../Model/Database.php';
 class Login extends FormValidator {
     private $loginModel;
+    private $userController;
 
-    public function __construct($username, $password) {
+    public function __construct($username, $password, $dbConnection) {
         $this->data['personal_info']['username'] = $username;
         $this->data['personal_info']['password'] = $password;
 
-        // Initialize the LoginModel
+        // Initialize the LoginModel and UserController
         $this->loginModel = new LoginModel();
+    
+        $this->userController = new UserController($dbConnection);
     }
 
     /**
-     * Login method that handles user authentication
+     * 
      * @param array $data
      * @return array
      */
@@ -37,7 +41,10 @@ class Login extends FormValidator {
                 // Set session status for authentication
                 $_SESSION['auth_status'] = true;
                 $_SESSION['user_id'] = $emailRecords['data']['id'];
-    
+
+                // Check if the user is an admin
+                $_SESSION['is_admin'] = $this->userController->isUserAdmin($emailRecords['data']['id']);
+
                 return [
                     'status' => true,
                     'message' => 'Login successful.'
@@ -55,24 +62,32 @@ class Login extends FormValidator {
             'errors' => ['email' => 'No user found with this email address.']
         ];
     }
-    
-    }
+}
 
-    if (isset($_SESSION['auth_status'])) {
-        // echo  $_SESSION['auth_status'];
-        header("Location: ./index.php");
-        
+// Redirect if the user is already logged in
+if (isset($_SESSION['auth_status'])) {
+    header("Location: ./index.php");
     exit();
-    }
+}
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST')  {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+// Handle POST request for login
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require_once('../Model/Database.php'); // Ensure database connection
+    $db = new Database();
+    $dbConnection = $db->connect();
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
     
-        $login = new Login($username, $password);
-        $result = $login->login();
-        if($result ['status'] === true) {
-            header("Location: ./index.php");
-            exit();
-        } 
+    $login = new Login($username, $password, $dbConnection);
+    $result = $login->login();
+
+    if ($result['status'] === true) {
+        // Redirect to index if login is successful
+        header("Location: ./index.php");
+        exit();
+    } else {
+        // Handle login errors
+        $errorMessages = $result['errors'];
     }
+}

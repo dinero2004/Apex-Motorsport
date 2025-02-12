@@ -1,0 +1,158 @@
+
+/* Buttons */
+.menu button {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+}
+
+.menu button.active {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.menu button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: black;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+table tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Buttons */
+
+td > form {
+display: noen;
+}
+
+/* Form Inputs and Buttons */
+input, select {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Headings */
+h1 {
+    color: black;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Toggle Menu */
+.toggle-menu {
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.toggle-menu button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-menu button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Form Containers */
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-width: max-content;
+    background-color: white;
+    overflow-x:auto;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr; 
+
+    gap: 5px; 
+    width: 600px; 
+    margin: 0 auto;
+}
+
+.form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; /* Labels stack naturally above inputs */
+}
+
+/* Minimal Spacing for Consistency */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* image preview styles */
+
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+

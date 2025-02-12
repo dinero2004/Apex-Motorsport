@@ -11,7 +11,7 @@ include("../templates/header.php");
     <meta name="description" content="Apex Motorsport: imprint and legal information">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/imprint.css">
-    <script src="../assets/js/code.js" defer></script>
+    <script src="../assets/code/code.js" defer></script>
     <link rel="icon" href="../assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/favicon/favicon_package_v0.16/favicon.ico" type="image/x-icon">
 

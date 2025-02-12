@@ -1,9 +1,8 @@
 <?php
-
 require_once ('Database.php');
 
 class LoginModel extends Database {
-
+    
   public function fetchUser(string $username) :array {
     $this->query("SELECT * FROM `users` WHERE username = :username");
     $this->bind("username", $username);
@@ -21,5 +20,6 @@ class LoginModel extends Database {
       'data' => []
     );
   }
+
 
 }

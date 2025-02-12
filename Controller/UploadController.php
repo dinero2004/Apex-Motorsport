@@ -1,7 +1,7 @@
 <?php
-require_once('../Model/Database.php');
-require_once('../Controller/Upload.php');
-require_once('../Model/UploadModel.php');
+require_once('../../Model/Database.php');
+require_once('../../Controller/Upload.php');
+require_once('../../Model/UploadModel.php');
 
 // Example configuration
 $config_upload = [
@@ -28,7 +28,7 @@ if (isset($_POST['go'])) {
         // Check if the file passes all validations (size, type, image dimensions)
         if ($uploader->checkFileInQuarantine()) {
             // Try to move the file to the target directory
-            $fileName = $uploader->moveFile();
+            $fileName = $uploader->moveFile($model_name);
             if ($fileName) {
                 
                 // Initialize UploadModel for saving file data into the database

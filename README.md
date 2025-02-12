@@ -27,32 +27,9 @@ The project's folder structure is organized as follows:
 │   ├── json              # JSON data for blog posts
 │   └── logo              # Logo assets
 ├── Controller
-│   ├── FormValidator.php     # Class for validation (sign up)
-│   ├── Login.php             # Handles session checks and sanitizes user input
-│   ├── Logout.php            # Manages session termination
-│   ├── Register.php          # Sanitizes and validates user input
-│   ├── Upload.php            # Validates file uploads
-│   └── UploadController.php  # Processes file uploads
 ├── Model
-│   ├── CarModel.php      # Retrieves car model information from the database
-│   ├── Database.php      # Database configuration file
-│   ├── LoginModel.php    # Searches for users in the database
-│   ├── RegisterModel.php # Handles user registration logic and inserts new users into the database
-│   └── UploadModel.php   # Manages uploads and saves file paths in the database
-├── templates
-│   ├── header.php        # Header navigation
-│   └── footer.php        # Footer section
 ├── views
-│   ├── about.php         # About page
-│   ├── cars.php          # Cars page (old layout)
-│   ├── confirm.php       # Account confirmation page
-│   ├── imprint.php       # Terms and conditions page
-│   ├── index.php         # Home page
-│   ├── login.php         # Login page
-│   ├── register.php      # Registration page
-│   ├── reviews.php       # Reviews page for users
-│   └── technology.php    # Technology details page
-
+   ├── cms_folder # CMS PAges
 
 ## Setup Instructions
 
@@ -61,11 +38,11 @@ The project's folder structure is organized as follows:
 2. **Server Environment:** Make sure you have a server environment set up (e.g., Apache(recommended) or Nginx) with PHP and MySQL installed.
 
 3. **Database Import:**
-   - Navigate to `src/assets/database`.
+   - Navigate to `assets/sql`.
    - Import the SQL file `Apex_Motorsport.sql` into your MySQL database. This will create a database named `Apex_Motorsport` with a table called `users` to store user information.
 
 4. **Database Connection:**
-   - Go to `src/config/request.php`.
+   - Go to `Model/Database.php`.
    - Update the database credentials to match your server configuration:
      ```php
      <?php
@@ -76,20 +53,18 @@ The project's folder structure is organized as follows:
      ?>
      ```
 
-
-
 ## Running the Project
 
 1. **Navigate to Project URL:** Once set up, open the project by navigating to its URL on your server.
 
 2. **Account Management Pages:**
    - **Login:** `login.php`
-   - **Signup:** `signup.php`
+   - **Signup:** `register.php`
    - Both pages include HTML templates with PHP for form handling. Validation and submission processes are managed in the `validation` folder, ensuring data is sanitized and securely stored.
 
 3. **Testing Database Connection:**
    - Ensure your server can connect to the `Apex_Motorsport` database by visiting the login and signup pages.
-   - Errors or connection issues can typically be resolved by verifying the settings in `request.php`.
+   - Errors or connection issues can typically be resolved by verifying the settings in `Database.php`.
 
 ## Database Structure
 
@@ -97,32 +72,34 @@ The `users` table in the `Apex_Motorsport` database stores user data in multiple
 
 ## Authentication and Validation
 
-1. **Login Validation:** The `login_valid.php` file in the `validation` folder handles login form validation and manages user session creation.
-
-2. **Signup Validation:** The `signup_valid.php` script manages user account creation by validating and sanitizing user input before storing it in the database.
-
+1. **Login Validation:** The Validation takes Part into the Form Validator class
 3. **Logout Process:** The `logout.php` script ends the user session and logs the user out, redirecting them to the home page.
-
-4. **File Upload**
-
-- **Logic Implementation and File Handling**  
-  - The upload logic is encapsulated in the **`rawUpload`** class, located in the `rawUpload.class.php` file under the **`class`** directory.  
-  - File handling occurs in **`uploadHandler.php`**, located in the **`controller`** folder.
-
-- **Form Display and User Input**  
-  - The upload form is on the **`technology_blog.php`** page (current technology page).  
-  - Users can choose the file to upload, provide alternative text, and select the target folder folder_1, folder_2, folder_3 for storing the image.
-
-- **File Validation**  
-  - Upon form submission, the **`rawUpload`** class validates the uploaded file by checking:
-    - Size restrictions  
-    - Allowed MIME types and file extensions  
-    - Image dimensions (width and height)  
-
+ 
 - **File Storage**  
   - After successful validation, the file is moved to the specified target folder.
 
 - **Database Integration**  
   - The file path and the provided alternative text are saved in the **`uploads`** table of the database for future reference.
 
+# Setup CMS
+
+## 1. Sign Up and Grant Admin Role
+- After successfully setting up the project, you can sign up (create an account) using the **"Create an Account"** option in the footer.  
+- Once you have signed up, open the database table called `users` and set the value of the `is_admin` column to `1` for your user account. This will grant you admin privileges.
+
+## 2. Login and Access the CMS Dashboard
+- Log in to authenticate yourself after becoming an admin.  
+- Once logged in, a new page called **CMS Dashboard** will appear in the navigation.  
+- The CMS Dashboard includes its own navigation with pages dedicated to content management.
+
+## 3. Content Management Features
+From the CMS Dashboard, you can:
+- **Manage Cars**:  
+  - Add, delete, edit records, and upload images for each car model.  
+- **Manage Manufacturers**:  
+  - Add new manufacturers or delete existing ones.  
+- **Grant Admin Rights**:  
+  - Assign admin privileges to other users by modifying their roles.
+
+- **You would find more information on the dashboard page**:
 

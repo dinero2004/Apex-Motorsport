@@ -1,11 +1,10 @@
 <?php
 require("../templates/header.php");
 
-// Display the success message if it exists
-if (isset($_SESSION['success_message'])) {
-    echo "<br><span style='color: green;'>" . htmlspecialchars($_SESSION['success_message']) . "</span>";
-    unset($_SESSION['success_message']); // Clear the message after displaying
-}
+// if (isset($_SESSION['auth_status'])) {
+//     echo "<br><span style='color: green;'>You are logged in!</span>";
+//     exit();
+// }
 
 ?>
 
@@ -26,6 +25,10 @@ if (isset($_SESSION['success_message'])) {
 
 
     <title>Apex Motorsport</title>
+    <style>
+        .error { color: red; font-size: 0.9em; padding: 10px;}
+        .valid { color: green; font-size: 0.9em; }
+    </style>
 </head>
 
 <body>
