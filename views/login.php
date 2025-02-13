@@ -1,5 +1,6 @@
 <?php 
-
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+ini_set('display_errors', 0);
 
 require("../Controller/LoginController.php");
 include("../templates/header.php");

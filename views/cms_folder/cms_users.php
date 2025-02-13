@@ -1,4 +1,17 @@
 <?php
+
+session_start();
+
+// Check if user is logged in and has admin privileges
+$isLoggedIn = isset($_SESSION['auth_status']) && $_SESSION['auth_status'] === true;
+$isAdmin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true;
+
+// Redirect non-logged-in or non-admin users
+if (!$isLoggedIn || !$isAdmin) {
+    header("Location: ../../views/login.php"); // Redirect to login page
+    exit();
+}
+
 require_once('../../Controller/UserController.php');
 
 // Initialize Database and Controller
